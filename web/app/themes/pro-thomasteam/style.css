@@ -1,0 +1,328 @@
+/*
+
+Theme Name: Pro - Thomas Team Properties
+Theme URI: http://theme.co/pro/
+Author: Themeco
+Author URI: http://theme.co/
+Description: Make all of your modifications to Pro in this child theme.
+Version: 1.0.0
+Template: pro
+
+*/
+
+/* Topbar styles */
+
+@media only screen and (max-width: 750px) {
+  .x-topbar {
+    display: none !important;
+  }
+}
+
+.x-social-global {
+  position: relative;
+}
+
+
+a.zillow {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 24px;
+  height: 32px;
+}
+
+.x-icon-zillow {
+  height: 100%;
+  position: relative;
+}
+
+.x-icon-zillow:before {
+  opacity: 0;
+}
+
+.x-icon-zillow:after {
+  position: absolute;
+  top: 7.5px;
+  left: 4px;
+  width: 15.42px;
+  height: 15.75px;
+  background: url('./zillow-icon.png');
+  background-color: #fff;
+  /* border: 1px solid #1377E1; */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  content: "";
+  display: block;
+  z-index: 10;
+}
+
+/* .x-icon-zillow:hover:after {
+  opacity: 0.3;
+} */
+
+.x-topbar .x-container {
+  width: 96% !important;
+  max-width: 1250px !important;
+}
+
+.x-topbar {
+  background-color: #043562 !important;
+}
+.x-topbar p.p-info {
+  float: right !important;
+}
+
+.x-topbar .x-social-global i,
+.x-topbar p.p-info a {
+  color: #fff !important;
+}
+
+/* Navbar styles */
+
+.x-navbar-inner .x-container {
+  width: 98% !important;
+  max-width: 1250px !important;
+}
+
+.x-navbar .desktop .x-nav > li > a {
+  padding: 30px 2.5px 0 2.5px !important;
+}
+
+@media only screen and (max-width: 750px) {
+  .x-navbar-inner .x-container {
+    width: 90% !important;
+  }
+}
+
+/* Body styles */
+
+#ihf-main-container .chosen-container-single .chosen-single,
+#ihf-main-container .input-text,
+#ihf-main-container input[type="text"],
+#ihf-main-container input[type="input"] {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  border-radius: 0 !important;
+}
+
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+.wpcf7-submit,
+.btn {
+  font-family: "Merriweather",serif !important;
+  border: none !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  background-color: #043562 !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+}
+
+.wpcf7-submit:hover,
+.btn:hover {
+  text-decoration: none !important;
+  background-color: #1E7EA3 !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+}
+
+.x-scroll-top {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 0.175em 0.125em rgba(0,0,0,0.5);
+}
+
+.narrow-section .x-container {
+  max-width: 975px !important;
+}
+
+.narrower-section .x-container {
+  max-width: 750px !important;
+}
+
+div.wpcf7 label {
+  font-family: "Merriweather";
+  font-weight: bold;
+  font-size: 0.75em;
+  color: #043562;
+}
+
+div.wpcf7 p.acceptance {
+  font-family: "Merriweather";
+  font-size: 0.65em;
+  margin-bottom: 5px;
+}
+
+/* Footer styles */
+
+.widget_text h4.h-widget {
+  font-family: "Merriweather",serif !important;
+}
+
+.widget_text .textwidget {
+  font-family: "Muli",sans-serif !important;
+  font-size: 12px;
+}
+
+.x-colophon-content {
+  font-family: "Muli",sans-serif !important;
+  font-size: 12px;
+}
+
+/* Slider styles */
+
+.quote-slider .x-slides img {
+  max-width: unset !important;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  box-shadow: 0 0.15em 0.125em rgba(0,0,0,0.25);
+}
+
+.quote-slider .x-feature-box.block-quote {
+  max-width: 600px !important;
+}
+
+.quote-slider h4 {
+  font-family: "Merriweather",serif;
+}
+
+.quote-slider p {
+  font-family: "Muli",sans-serif;
+}
+
+.quote-slider ol.flex-control-nav.flex-control-paging {
+  background-color: rgba(0,0,0,0);
+}
+
+.quote-slider ol.flex-control-nav.flex-control-paging a {
+	width: 10px;
+  height: 10px;
+  background-color: #c2c2c2;
+  border-radius: 50% !important;
+}
+
+.quote-slider ol.flex-control-nav.flex-control-paging a:hover,
+.quote-slider ol.flex-control-nav.flex-control-paging a.flex-active {
+	background-color: #1E7EA3;
+}
+
+/* FlexMLS */
+
+.flexmls_connect__container {
+  border: 0;
+}
+
+.flexmls_connect__container,
+.flexmls_connect__carousel_nav {
+  background-color: transparent;
+}
+
+.flexmls_connect__carousel_nav > a {
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.flexmls_connect__carousel_nav > a:hover,
+.flexmls_connect__carousel_nav > a:focus {
+  text-decoration: underline;
+}
+
+.flexmls_connect__listing {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0em 0.55em 0.5em -5px rgba(0,0,0,0.25);
+}
+
+.flexmls_connect__slides div p.caption small,
+.flexmls_connect__slides div p.caption a small.dark {
+  line-height: 1.5;
+  padding: 8px;
+  padding-bottom: 8px;
+}
+.flexmls_connect__slides div p.caption a {
+  padding-top: 8px;
+  font-size: 16px;
+}
+
+.flexmls_connect__slides div p.caption a small.dark {
+  font-size: 14px;
+}
+
+.flexmls_connect__search_new_shadow {
+  border: none;
+  box-shadow: none;
+  background-color: transparent !important;
+}
+
+.intro-search input.select2-search__field {
+  border: 0 !important;
+  padding-left: 8px !important;
+  font-family: 'Lato' !important;
+}
+
+input[type=submit].flexmls_connect__search_new_submit {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.flexmls_connect__search_new_links a {
+  font-size: 14px;
+}
+
+.flexmls_connect__search_new_links.flexmls_connect__search_new_links {
+  margin-top: 0;
+  width: 100%;
+}
+
+.flexmls_connect__search_new {
+  padding: 0;
+}
+
+.flexmls_connect__badge,
+.flexmls_toggle-view {
+  display: none;
+}
+
+.flexmls_connect__form_submit {
+  padding: 0.5em 1em;
+  color: #ffffff;
+  border-color: #003462;
+  background-color: #003462;
+  text-shadow: 0 0.075em 0.075em rgba(0,0,0,0.5);
+  border-radius: 0.25em;
+}
+
+.flexmls_connect__sr_listing_facts.flexmls_connect__sr_listing_facts {
+  border-top: 0;
+}
+
+.flexmls_connect__sr_listing_facts > *:last-child {
+  display: none;
+}
+
+.flexmls_connect__zebra:nth-child(odd), div.flexmls_connect__zebra:nth-child(odd) {
+  background-color: #eaeaea;
+}
+
+.flexmls_connect__form_textarea.flexmls_connect__form_textarea {
+  width: 100%;
+}
