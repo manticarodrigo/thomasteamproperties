@@ -7,7 +7,7 @@ wordpress_sites:
     site_hosts:
       - canonical: thomasteamproperties.com
         redirects:
-          - www.example.com
+          - www.thomasteamproperties.com
     local_path: ../ # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:manticarodrigo/thomasteamproperties.git # replace with your Git repo URL
     branch: master
