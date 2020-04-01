@@ -144,10 +144,13 @@ endif;
 if ( ! function_exists( 'x_ethos_entry_cover_background_image_style' ) ) :
   function x_ethos_entry_cover_background_image_style() {
 
-    $featured_image   = x_make_protocol_relative( x_get_featured_image_url() );
-    $background_image = ( $featured_image != '' ) ? 'background-image: url(' . $featured_image . ');' : 'background-image: none;';
+    $featured_image   = x_get_featured_image_url();
 
-    return $background_image;
+    if ( $featured_image ) {
+      return 'background-image: url(' . x_make_protocol_relative( $featured_image ) . ');';
+    }
+
+    return 'background-image: none;';
 
   }
 endif;
@@ -337,7 +340,7 @@ if ( ! function_exists( 'x_ethos_comment' ) ) :
         $rating = esc_attr( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating', true ) );
       endif;
     ?>
-    <li id="li-comment-<?php comment_ID(); ?>" itemprop="comment" itemscope itemtype="https://schema.org/Comment" <?php comment_class(); ?>>
+    <li id="li-comment-<?php comment_ID(); ?>" <?php x_comment_schema ('li'); ?> <?php comment_class(); ?>>
       <article id="comment-<?php comment_ID(); ?>" class="comment">
         <?php
         printf( '<div class="x-comment-img">%1$s %2$s</div>',
@@ -347,6 +350,7 @@ if ( ! function_exists( 'x_ethos_comment' ) ) :
         ?>
         <div class="x-comment-content-wrap">
           <header class="x-comment-header">
+            <?php x_comment_schema ('item'); ?>
             <div class="x-comment-meta">
               <?php
               printf( '<a href="%1$s" class="x-comment-time"><time itemprop="datePublished" datetime="%2$s">%3$s</time></a>',
@@ -367,7 +371,7 @@ if ( ! function_exists( 'x_ethos_comment' ) ) :
               get_comment_author_link()
             );
             ?>
-            <?php if ( x_is_product() && get_option( 'woocommerce_enable_review_rating' ) == 'yes' ) : ?>
+            <?php if ( x_is_product() && get_option( 'woocommerce_enable_review_rating' ) == 'yes' && !empty( $rating ) ) : ?>
               <div class="star-rating-container">
                 <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo sprintf( __( 'Rated %d out of 5', '__x__' ), $rating ) ?>">
                   <span style="width:<?php echo ( intval( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating', true ) ) / 5 ) * 100; ?>%"><strong itemprop="ratingValue"><?php echo intval( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating', true ) ); ?></strong> <?php _e( 'out of 5', '__x__' ); ?></span>

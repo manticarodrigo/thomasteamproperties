@@ -44,14 +44,14 @@
         <li>
           <?php x_tco()->admin_icon( 'docs', 'tco-box-feature-icon' ); ?>
           <div class="tco-box-feature-info">
-            <h4 class="tco-box-content-title"><?php _e( 'Knowledge Base', '__x__' ); ?></h4>
+            <h4 class="tco-box-content-title"><?php _e( 'Docs', '__x__' ); ?></h4>
             <span class="tco-box-content-text"><?php _e( 'Dozens of articles and videos', '__x__' ); ?></span>
           </div>
         </li>
       </ul>
       <?php if ( $is_validated ) : ?>
         <div class="tco-btn-group-horizontal">
-          <a class="tco-btn" href="https://theme.co/apex/kb/" target="_blank"><?php _e( 'Knowledge Base', '__x__' ); ?></a><a class="tco-btn" href="https://theme.co/apex/support/" target="_blank"><?php _e( 'Support', '__x__' ); ?></a>
+          <a class="tco-btn" href="https://theme.co/docs/" target="_blank"><?php _e( 'Docs', '__x__' ); ?></a><a class="tco-btn" href="https://theme.co/apex/support/" target="_blank"><?php _e( 'Support', '__x__' ); ?></a>
         </div>
       <?php else : ?>
         <?php x_validation()->preview_unlock( '.tco-box-support', __( 'Get World-Class Support', '__x__' )); ?>

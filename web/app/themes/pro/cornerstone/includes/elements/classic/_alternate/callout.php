@@ -89,7 +89,7 @@ class CS_Callout extends Cornerstone_Element_Base {
     $href_target = ( $href_target == 'true' ) ? 'blank' : '';
 
     $heading     = cs_clean_shortcode_att( $heading );
-    $message     = cs_clean_shortcode_att( $message );
+    $message     = cs_clean_shortcode_att( cs_dynamic_content( $message ) );
     $button_text = cs_clean_shortcode_att( $button_text );
     $href        = cs_clean_shortcode_att( $href );
     $href_title  = cs_clean_shortcode_att( $href_title );

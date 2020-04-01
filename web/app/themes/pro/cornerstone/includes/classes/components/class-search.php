@@ -1,5 +1,7 @@
 <?php
 
+//To be removed : cs_content_seo implementation, texts are now visible through standard content
+
 class Cornerstone_Search extends Cornerstone_Plugin_Component {
  
   public function setup() {

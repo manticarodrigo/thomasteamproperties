@@ -20,24 +20,24 @@ class Cornerstone_Color_Manager extends Cornerstone_Plugin_Component {
   public function default_color_items( $data = array() ) {
     return array(
       array(
-        '_id'     => bin2hex('Brand Primary'),
         'title'   => csi18n( 'app.colors.brand-primary' ),
         'value'   => 'transparent',
+        '_id'     => md5('brand-primary' . microtime()),
       ),
       array(
-        '_id'     => bin2hex('Brand Secondary'),
         'title'   => csi18n( 'app.colors.brand-secondary' ),
         'value'   => 'transparent',
+        '_id'     => md5('brand-secondary' . microtime()),
       ),
       array(
-        '_id'     => bin2hex('Link'),
         'title'   => csi18n( 'app.colors.link' ),
         'value'   => 'transparent',
+        '_id'     => md5('link' . microtime()),
       ),
       array(
-        '_id'     => bin2hex('Link Interaction'),
         'title'   => csi18n( 'app.colors.link-interaction' ),
         'value'   => 'transparent',
+        '_id'     => md5('link-interaction' . microtime()),
       )
     );
   }

@@ -22,14 +22,14 @@
       <li>
         <?php cs_tco()->admin_icon( 'docs', 'tco-box-feature-icon' ); ?>
         <div class="tco-box-feature-info">
-          <h4 class="tco-box-content-title"><?php _e( 'Knowledge Base', 'cornerstone' ); ?></h4>
+          <h4 class="tco-box-content-title"><?php _e( 'Docs', 'cornerstone' ); ?></h4>
           <span class="tco-box-content-text"><?php _e( 'Dozens of articles and videos', 'cornerstone' ); ?></span>
         </div>
       </li>
     </ul>
     <?php if ( $is_validated ) : ?>
       <div class="tco-btn-group-horizontal">
-        <a class="tco-btn" href="https://theme.co/apex/kb/" target="_blank"><?php _e( 'Knowledge Base', 'cornerstone' ); ?></a><a class="tco-btn" href="https://theme.co/apex/support/" target="_blank"><?php _e( 'Support', 'cornerstone' ); ?></a>
+        <a class="tco-btn" href="https://theme.co/docs/" target="_blank"><?php _e( 'Docs', 'cornerstone' ); ?></a><a class="tco-btn" href="https://theme.co/apex/support/" target="_blank"><?php _e( 'Support', 'cornerstone' ); ?></a>
       </div>
     <?php else : ?>
       <a class="tco-btn tco-btn-nope" href="#" data-tco-toggle=".tco-box-support .tco-overlay"><?php _e( 'Get World-Class Support', 'cornerstone' ); ?></a>

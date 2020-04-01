@@ -26,9 +26,10 @@ $values = cs_compose_values(
   'menu-item',
   cs_values( 'menu-item', 'sub' ),
   array(
-    'anchor_padding'         => cs_value( '0.75em', 'style' ),
-    'sub_anchor_padding'     => cs_value( '0.75em', 'style' ),
-    'sub_anchor_text_margin' => cs_value( '5px auto 5px 5px', 'style' ),
+    'anchor_padding'          => cs_value( '0.75em', 'style' ),
+    'sub_anchor_padding'      => cs_value( '0.75em', 'style' ),
+    'sub_anchor_text_margin'  => cs_value( '5px auto 5px 5px', 'style' ),
+    'sub_anchor_flex_justify' => cs_value( 'flex-start', 'style' )    
   ),
   'omega'
 );

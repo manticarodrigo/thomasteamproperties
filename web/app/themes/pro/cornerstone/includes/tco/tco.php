@@ -499,7 +499,7 @@ if ( ! class_exists( 'TCO_1_0' ) ) :
     public function check_ajax_referer( $die = true ) { // 28
 
       if ( ! isset( $_REQUEST['_tco_nonce'] ) ) {
-        return false;
+        wp_send_json_error();
       }
 
       $check = ( false !== wp_verify_nonce( $_REQUEST['_tco_nonce'], 'tco-common' ) );

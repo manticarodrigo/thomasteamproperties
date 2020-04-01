@@ -21,8 +21,14 @@ class X_Validation_Theme_Options_Manager {
 
   public function import( $options ) {
 
-    foreach ( $options as $key => $value ) {
-      update_option( $key, $value );
+    $default_options = array_keys( x_bootstrap()->get_theme_option_defaults() );
+
+    foreach ( $default_options as $key  ) {
+
+      if ( isset( $options[$key] ) ) {
+        update_option( $key, $options[$key] );
+      }
+
     }
 
     do_action( 'x_theme_options_manager_import' );

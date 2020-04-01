@@ -177,15 +177,16 @@ if ( ! function_exists( 'x_integrity_comment' ) ) :
       endif;
       $avatar_variation = ( x_is_product() ) ? ' x-img-thumbnail' : '';
     ?>
-    <li id="li-comment-<?php comment_ID(); ?>" itemprop="comment" itemscope itemtype="https://schema.org/Comment" <?php comment_class(); ?>>
+    <li id="li-comment-<?php comment_ID(); ?>" <?php x_comment_schema ('li'); ?> <?php comment_class(); ?>>
       <?php
       printf( '<div class="x-comment-img">%1$s %2$s</div>',
         '<span class="avatar-wrap cf' . $avatar_variation . '">' . get_avatar( $comment, 120 ) . '</span>',
         ( $comment->user_id === $post->post_author ) ? '<span class="bypostauthor">' . __( 'Post<br>Author', '__x__' ) . '</span>' : ''
       );
       ?>
-      <article id="comment-<?php comment_ID(); ?>" class="comment">
+      <article id="comment-<?php comment_ID(); ?>" class="comment">        
         <header class="x-comment-header">
+          <?php x_comment_schema ('item'); ?>
           <?php
           printf( '<cite class="x-comment-author" itemprop="author">%1$s</cite>',
             get_comment_author_link()
@@ -200,7 +201,7 @@ if ( ! function_exists( 'x_integrity_comment' ) ) :
           );
           edit_comment_link( __( '<i class="x-icon-edit" data-x-icon-s="&#xf044;"></i> Edit', '__x__' ) );
           ?>
-          <?php if ( x_is_product() && get_option('woocommerce_enable_review_rating') == 'yes' ) : ?>
+          <?php if ( x_is_product() && get_option('woocommerce_enable_review_rating') == 'yes' && !empty( $rating ) ) : ?>
             <div class="star-rating-container">
               <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo sprintf( __( 'Rated %d out of 5', '__x__' ), $rating ) ?>">
                 <span style="width:<?php echo ( intval( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating', true ) ) / 5 ) * 100; ?>%"><strong itemprop="ratingValue"><?php echo intval( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating', true ) ); ?></strong> <?php _e( 'out of 5', '__x__' ); ?></span>

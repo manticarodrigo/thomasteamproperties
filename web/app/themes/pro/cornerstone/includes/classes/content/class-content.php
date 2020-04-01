@@ -105,6 +105,20 @@ class Cornerstone_Content {
     return $settings;
   }
 
+  protected function generate_seo_data( $content ) {
+
+      $content = do_shortcode ('[cs_content _p='.$this->id.']'.$content.'[/cs_content]');
+      $images = array();
+
+      if ( strpos($content, 'img' ) !== false ) {
+          preg_match_all('/<img .*>/U', $content, $images);
+      }
+
+     //Optional change, but should clean all the spaces
+     return count( $images ) > 0 ?  trim( strip_tags($content) ).implode('', $images[0]) : trim ( strip_tags( $content ) ); 
+
+  }
+
   public function save() {
 
     $post_type_object = get_post_type_object( $this->post_type );
@@ -257,13 +271,14 @@ class Cornerstone_Content {
     delete_post_meta( $this->id, '_cs_generated_styles');
 
 		$post_content = apply_filters( 'cornerstone_save_post_content', $output['content'] );
+    $post_content_seo = $this->generate_seo_data( $post_content ) ;
 
     $update = array(
 			'ID'           => $this->id,
       'title'        => $this->get_title(),
       'post_type'    => $this->post_type,
       'post_status'  => $this->post_status,
-      'post_content' => wp_slash( '[cs_content]' . $post_content . '[/cs_content]' ),
+      'post_content' => wp_slash( '[cs_content]' . $post_content . '[/cs_content][cs_content_seo]'.$post_content_seo.'[/cs_content_seo]' ),
     );
 
     if ( $this->post_name ) {
@@ -281,11 +296,7 @@ class Cornerstone_Content {
     }
 
 		$post_type = get_post_type( $this->id );
-
-		if ( false !== $post_type && post_type_supports( $post_type, 'excerpt' ) ) {
-			update_post_meta( $this->id, '_cornerstone_excerpt', cs_derive_excerpt( "[cs_content _p={$id} no_wrap=true]{$post_content}[/cs_content]" ) );
-		}
-
+    
     do_action( 'cornerstone_after_save_content', $this->id );
 
     return true;
@@ -460,6 +471,10 @@ class Cornerstone_Content {
   }
 
   public function update_settings( $settings ) {
+
+    /* Allow creation of _cornerstone_settings upon duplication, works either empty or from existing settings loaded upon __construct */
+
+    cs_update_serialized_post_meta( $this->id, '_cornerstone_settings', $settings, '', false, 'cs_content_update_serialized_content' );
 
     $setting_manager = CS()->component( 'Settings_Manager' );
     $setting_manager->load();

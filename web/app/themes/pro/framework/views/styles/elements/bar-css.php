@@ -103,7 +103,7 @@
 .$_el.x-bar-outer-spacers:before,
 .$_el.x-bar-outer-spacers:after {
   flex-basis: $bar_outer_spacing;
-  width: $bar_outer_spacing;
+  width: $bar_outer_spacing !important;
   height: $bar_outer_spacing;
 }
 

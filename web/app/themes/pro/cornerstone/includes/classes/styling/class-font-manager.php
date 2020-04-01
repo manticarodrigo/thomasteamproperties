@@ -27,6 +27,24 @@ class Cornerstone_Font_Manager extends Cornerstone_Plugin_Component {
     }
 
     add_filter( 'upload_mimes', array( $this, 'upload_mimes' ), 999 );
+
+    if ( did_action('cs_before_preview_frame') ) {
+      add_action( 'x_head_css', array( $this, 'load_custom_fonts_cs' ) );
+    }
+
+  }
+
+  public function load_custom_fonts_cs(){
+    
+    $buffer = '';
+    $custom_fonts = $this->get_font_config();
+    
+    foreach( $custom_fonts['customFontItems'] as $font ){
+      $buffer .= $font['css'];
+    }
+    
+    echo $buffer;
+
   }
 
   public function set_previewing() {
@@ -207,6 +225,10 @@ class Cornerstone_Font_Manager extends Cornerstone_Plugin_Component {
     }
 
     ksort($sources);
+
+    if ( did_action('cs_before_preview_frame') ){
+      unset( $sources['custom'] );
+    }
 
     do_action( 'cs_load_queued_fonts', $this->queue, $sources );
 

@@ -32,9 +32,41 @@ function x_gravity_forms_enqueue_styles() {
   }
 
   wp_enqueue_style( 'x-gravity-forms', X_TEMPLATE_URL . '/framework/dist/css/site/gravity_forms/' . $stack . $ext . '.css', array( 'gforms_reset_css', 'gforms_formsmain_css', 'gforms_ready_class_css', 'gforms_browsers_css' ), X_ASSET_REV, 'all' );
+
 }
 
 
+add_action('x_enqueue_styles', 'x_gravity_forms_checker', -1);
 
-add_action( 'gform_enqueue_scripts', 'x_gravity_forms_enqueue_styles', 10, 2 );
+function x_gravity_forms_checker () {
 
+    if ( is_plugin_active('gravityforms/gravityforms.php') ) {
+      
+      //Enqueue it globally but only when element or shortcode is present
+      //The hook gform_enqueue_scripts is late binded, it appears after other enqueue or in the footer if it's called within the content.
+      $checker = CS()->component('Shortcode_Finder');
+      $shortcode = 'gravityform';
+
+      global $post;
+
+      if ( is_a( $post, 'WP_POST' ) ) { 
+
+          //check content of the current post
+          $checker->process_content($shortcode, $post->ID);//shortcode
+          $checker->process_content($shortcode, $post->ID, false); //for classic gravity form element
+
+      } 
+
+      //check header and footer
+      $header_assignment = CS()->component('Header_Assignments')->locate_assignment();
+      $checker->process_content( $shortcode, $header_assignment, false );
+
+      $footer_assignment = CS()->component('Footer_Assignments')->locate_assignment();
+      $checker->process_content( $shortcode, $footer_assignment, false );
+
+      //if present, then enqueue it
+      if ( $checker->has($shortcode) ) x_gravity_forms_enqueue_styles();
+
+  }
+
+}

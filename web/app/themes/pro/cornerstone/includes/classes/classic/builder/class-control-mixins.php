@@ -376,7 +376,7 @@ class Cornerstone_Control_Mixins extends Cornerstone_Plugin_Component {
 
 		$classes = array_values( $inject['classes'] );
 		if ( count( $classes ) > 0 ) {
-			$atts['class'] = trim( implode( $classes, ' ' ) );
+			$atts['class'] = trim( implode( ' ', $classes ) );
 		}
 
 		$styles = array_values( $inject['styles'] );

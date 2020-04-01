@@ -302,7 +302,7 @@ function x_tco_localize_admin_js( $strings ) {
 function x_tco_localize_updates( $strings ) {
 
   $strings = array_merge( $strings, array(
-    'connection-error' => __( 'Could not establish connection. For assistance, please start by reviewing our article on troubleshooting <a href="https://theme.co/apex/kb/connection-issues/">connection issues.</a>', '__x__' )
+    'connection-error' => __( 'Could not establish connection. For assistance, please start by reviewing our article on troubleshooting <a href="https://theme.co/docs/problems-with-product-validation/">connection issues.</a>', '__x__' )
   ) );
 
   return $strings;

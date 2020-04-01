@@ -92,8 +92,13 @@ if ( ! function_exists( 'x_social_meta' ) ) :
     $description = '';
 
     if ( is_singular() ) {
-      $excerpt = get_the_excerpt();
-      $description = $excerpt ? $excerpt : get_post()->post_content;
+      
+      //Detect if a post type support an excerpt, then properly retrieve excerpt based on Wordpress get_the_excerpt()
+      //Else, get the page content and generate one
+      //If we include [cs_content_seo] to strip_tags() again, then it will again remove the entire block including the texts within boundaries, hence, let's  remove [cs_content_seo] first.
+
+      $description = ( post_type_supports ( get_post_type(), 'excerpt') && $excerpt = get_the_excerpt() ) ? $excerpt : preg_replace( '/\[cs_content_seo\](.*)\[\/cs_content_seo\]/msi', '\1', get_post()->post_content );
+
     }
 
     $description = trim( wp_trim_words( strip_shortcodes( strip_tags( $description ) ), 35, '' ), '.!?,;:-' ) . '&hellip;';
@@ -111,6 +116,6 @@ if ( ! function_exists( 'x_social_meta' ) ) :
 
   }
 
-add_action( 'wp_head', 'x_social_meta' );
+add_action( 'wp_head', 'x_social_meta', 2 );
 
 endif;

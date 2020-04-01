@@ -89,7 +89,18 @@ class Cornerstone_App_Preferences extends Cornerstone_Plugin_Component {
   }
 
   public function get_preference_controls() {
-    return $this->config_group( 'app/preference-controls' );
+
+    $preference_controls = $this->config_group( 'app/preference-controls' );
+    
+    //Remove Pro grid specific option when X theme or cornerstone is active
+    if( $preference_controls[8]['key'] == 'content_layout_element' && X_SLUG !== 'pro' ) {
+      $choices = $preference_controls[8]['options']['choices'];
+      unset( $choices[1] );
+      $preference_controls[8]['options']['choices'] = array_values( $choices );
+    }
+
+    return $preference_controls;
+
   }
 
 }

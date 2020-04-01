@@ -21,14 +21,18 @@ class Cornerstone_Front_End extends Cornerstone_Plugin_Component {
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
 		add_action( 'cs_late_template_redirect', array( $this, 'postLoaded' ), 9998, 0 );
+		
+		// Excerpt related functions		
 		add_filter( 'get_the_excerpt', array( $this, 'maybe_supply_excerpt' ), 100 );
+		add_filter( 'strip_shortcodes_tagnames', array($this, 'preserve_excerpt'), 999999 );
 
 		// Add Body Class
 		add_filter( 'body_class', array( $this, 'addBodyClass' ), 10002 );
 
 		add_filter( 'the_content', array( $this, 'cs_content_before_shortcodes' ), 10 );
-    add_filter( 'the_content', array( $this, 'cs_content_late' ), 999999 );
+    	add_filter( 'the_content', array( $this, 'cs_content_late' ), 999999 );
 		add_shortcode( 'cs_content', array( $this, 'cs_content_shortcode' ) );
+		add_shortcode( 'cs_content_seo', array( $this, 'cs_content_seo' ) );
 
     add_action( 'wp_head', array( $this, 'cs_head_late'), 10000 );
     add_action( 'wp_head', array( $this, 'cs_head_late_after'), 10001 );
@@ -196,17 +200,36 @@ class Cornerstone_Front_End extends Cornerstone_Plugin_Component {
 
 	}
 
-	public function maybe_supply_excerpt( $excerpt ) {
+	/**
+	 * Preserve content of [cs_content_seo][/cs_content_seo] making it visible for excerpt generation.
+	 */
+	public function preserve_excerpt ( $tags ) {		
+		return array_diff ($tags, array('cs_content_seo'));		
+	}
+
+	/**
+	 * This is no longer needed since [cs_content_seo][/cs_content_seo] is preserved and visible, 
+	 * but for backward compatibility, this will remain until removed in the future
+	 */
+	public function maybe_supply_excerpt( $excerpt ) { //this function 
 
 		if ( '' === $excerpt ) {
 
-			$post = get_post();
+			$excerpt_length = apply_filters( 'excerpt_length', 55 );
+			$excerpt_more = apply_filters( 'excerpt_more', ' [&hellip;]' );
 
-			$cs_excerpt = get_post_meta( $post->ID, '_cornerstone_excerpt', true );
+			$content = get_the_content( '' );
 
-			if ( $cs_excerpt ) {
-				return cs_format_excerpt( $cs_excerpt );
-			}
+			if ( !strpos( $content, '[cs_content_seo]') ) { 
+				$post = get_post();
+
+				$cs_excerpt = get_post_meta( $post->ID, '_cornerstone_excerpt', true );
+
+				if ( $cs_excerpt ) {					
+					return wp_trim_words( $cs_excerpt,  $excerpt_length, $excerpt_more );
+				}
+
+			} 
 
 		}
 
@@ -285,6 +308,18 @@ class Cornerstone_Front_End extends Cornerstone_Plugin_Component {
     $attrs = cs_atts( $attrs );
 
 		return "<div $attrs >$content</div>";
+	}
+
+	public function cs_content_seo ($atts, $content) {
+
+		extract( shortcode_atts( array(
+	      'output'      => false
+	    ), $atts, 'cs_content_seo' ) );
+
+		if ( $output || doing_filter ('get_the_excerpt') ) return $content;
+
+		return '';
+
 	}
 
   public function shim_x_before_site_end() {

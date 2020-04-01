@@ -3,7 +3,7 @@
 // Theme Constants
 // =============================================================================
 
-define( 'X_VERSION', '3.1.2' );
+define( 'X_VERSION', '3.2.3' );
 define( 'X_SLUG', 'pro' );
 define( 'X_TITLE', 'Pro' );
 define( 'X_I18N_PATH', X_TEMPLATE_PATH . '/framework/functions/pro/i18n');
@@ -14,7 +14,7 @@ define( 'X_I18N_PATH', X_TEMPLATE_PATH . '/framework/functions/pro/i18n');
 // }
 
 if ( ! defined('CS_ASSET_REV') ) {
-  define( 'CS_ASSET_REV', 'fa34ec9' );
+  define( 'CS_ASSET_REV', '0ce70e6' );
 }
 
 // App Environment Data

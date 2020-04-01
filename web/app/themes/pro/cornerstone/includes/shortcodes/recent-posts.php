@@ -59,7 +59,7 @@ function x_shortcode_recent_posts( $atts ) {
         $image_output_class = 'no-image';
       } else {
         $image              = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'entry-cropped' );
-        $bg_image           = ( $image[0] != '' ) ? ' style="background-image: url(' . $image[0] . ');"' : '';
+        $bg_image           = ( is_array($image) && $image[0] != '' ) ? ' style="background-image: url(' . $image[0] . ');"' : '';
         $image_output       = '<div class="x-recent-posts-img"' . $bg_image . '></div>';
         $image_output_class = 'with-image';
       }

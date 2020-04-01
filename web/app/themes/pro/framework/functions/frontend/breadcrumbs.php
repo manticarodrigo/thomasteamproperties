@@ -22,25 +22,25 @@ if ( ! function_exists( 'x_breadcrumbs' ) ) :
   function x_breadcrumbs() {
 
     $args_items = array(
-      'item_before'      => '',
-      'item_after'       => '',
-      'label_before'     => '',
-      'label_after'      => '',
+      'item_before'      => '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">',
+      'item_after'       => '</span>',
+      'label_before'     => '<span itemprop="name">',
+      'label_after'      => '</span>',
       'delimiter_before' => ' <span class="delimiter">',
       'delimiter_after'  => '</span> ',
       'delimiter_ltr'    => '<i class="x-icon-angle-right" data-x-icon-s="&#xf105;"></i>',
       'delimiter_rtl'    => '<i class="x-icon-angle-left" data-x-icon-s="&#xf104;"></i>',
       'current_class'    => 'current',
-      'anchor_atts'      => array(),
-      'include_meta'     => false,
+      'anchor_atts'      => array( 'itemtype' => 'http://schema.org/Thing', 'itemprop' => 'item' ),
+      'include_meta'     => true,
     );
 
     $args_data = array(
-      'home_label' => '<span class="home"><i class="x-icon-home" data-x-icon-s="&#xf015;"></i><span class="visually-hidden">' . __( 'Home', '__x__' ) . '</span></span>',
+        'home_label' => '<span class="home"><i class="x-icon-home" data-x-icon-s="&#xf015;"></i></span><span class="visually-hidden">' . __( 'Home', '__x__' ) . '</span>',
     );
 
     if ( x_get_option( 'x_breadcrumb_display' ) ) {
-      echo '<div class="x-breadcrumbs">' . x_breadcrumbs_items( x_breadcrumbs_data( $args_data ), $args_items ) . '</div>';
+      echo '<div class="x-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList" aria-label="Breadcrumb Navigation">' . x_breadcrumbs_items( x_breadcrumbs_data( $args_data ), $args_items ) . '</div>';
     }
 
   }
@@ -201,7 +201,9 @@ if ( ! function_exists( 'x_breadcrumbs_data' ) ) :
 
     if ( X_MEC_IS_ACTIVE ) {
       $events_options = get_option( 'mec_options' );
-      $events_label   = $events_options['settings']['archive_title'];
+      if ( isset( $events_options['settings']) && isset($events_options['settings']['archive_title'])) {
+        $events_label = $events_options['settings']['archive_title'];
+      }
     }
 
 

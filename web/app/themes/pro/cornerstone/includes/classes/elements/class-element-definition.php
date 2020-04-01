@@ -311,7 +311,9 @@ class Cornerstone_Element_Definition {
         continue;
       }
 
-      $sanitized[ $key ] = CS()->common()->sanitize_value( $value, in_array($key, $this->sanitize_html_safe_keys, true ) );
+      $sanitized[ $key ] = $value;
+      
+      //$sanitized[ $key ] = CS()->common()->sanitize_value( $value, in_array($key, $this->sanitize_html_safe_keys, true ) );
 
     }
 

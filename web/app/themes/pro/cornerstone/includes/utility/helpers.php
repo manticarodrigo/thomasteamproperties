@@ -94,6 +94,7 @@ function wp_script_data_function( $handle, $function_name, $data ) {
  * a shortcode.
  * @return string Post excerpt
  */
+
 function cs_get_raw_excerpt() {
 
 	// Swap wp_trim_excerpt for cs_trim_raw_excerpt
@@ -116,6 +117,7 @@ function cs_get_raw_excerpt() {
  * @param string $text Optional. The excerpt. If set to empty, an excerpt is generated.
  * @return string The excerpt.
  */
+
 function cs_trim_raw_excerpt( $text = '' ) {
 
 	$raw_excerpt = $text;
@@ -541,42 +543,6 @@ function cs_send_json_error( $data = null ) {
 
 	wp_send_json( apply_filters( '_cornerstone_send_json_response', $response ) );
 
-}
-
-
-/**
- * Procces content through the_content filters, and strip down to just the
- * contents of paragraph tags. To finish, pass it through wp_trim_words
- * using WordPress defaults.
- * @param  string $content Content to make an excerpt for
- * @return string          Text result
- */
-function cs_derive_excerpt( $content ) {
-
-	$the_content = do_shortcode( $content );
-	$length = apply_filters( 'excerpt_length', 55 );
-
-	$offset = 0;
-	$reduction = '';
-
-	while ( str_word_count( $reduction ) < $length * 1.5 ) {
-
-		preg_match( '/<p.*?>(.*?)<\/p>/', $the_content, $matches, PREG_OFFSET_CAPTURE, $offset );
-		if ( empty( $matches ) || ! isset( $matches[1] )  ) {
-			break;
-		}
-
-		$offset = $matches[1][1];
-		$reduction .= strip_tags( $matches[1][0] ) . ' ';
-
-	}
-
-	return trim( $reduction );
-
-}
-
-function cs_format_excerpt( $excerpt ) {
-  return wp_trim_words( $excerpt, apply_filters( 'excerpt_length', 55 ), apply_filters( 'excerpt_more', ' [&hellip;]' ) );
 }
 
 /**

@@ -245,3 +245,45 @@ $fa_css_prefix  = 'cs-fa';
   }
 
 <?php endif; ?>
+
+
+/* WooCommerce
+// ========================================================================== */
+<?php if ( class_exists( 'woocommerce' ) ) : ?>
+
+  <?php
+
+    if ( $fa_solid_enable || $fa_regular_enable || $fa_light_enable ){
+      // light
+      if ( $fa_light_enable ){
+        $fontawesome_family = 
+        'font-family: "FontAwesomeLight" !important;
+        font-weight: 300;';
+      }
+
+      // regular
+      if ( $fa_regular_enable ){
+        $fontawesome_family = 'font-family: "FontAwesomeRegular" !important;';
+      }
+
+      // solid
+      if ( $fa_solid_enable ){
+        $fontawesome_family = 
+        'font-family: "FontAwesome" !important;
+        font-weight: 900;';
+      }
+    }else{
+      // default
+      $fontawesome_family = 
+      'font-family: "FontAwesome" !important;
+      font-weight: 900;';
+    }
+
+  ?>
+  .woocommerce .button.product_type_simple:before, 
+  .woocommerce .button.product_type_variable:before, 
+  .woocommerce .button.single_add_to_cart_button:before{
+    <?php echo $fontawesome_family; ?>
+  }
+
+<?php endif; ?>

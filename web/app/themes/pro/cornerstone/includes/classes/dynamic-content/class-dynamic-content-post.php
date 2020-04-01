@@ -117,9 +117,18 @@ class Cornerstone_Dynamic_Content_Post extends Cornerstone_Plugin_Component {
 
   public function supply_field( $result, $field, $args = array() ) {
 
-    $post = CS()->component('Dynamic_Content')->get_post_from_args( $args );
-    // var_dump($post);
-    if ( ! $post ) {
+    $current_post = CS()->component('Dynamic_Content')->get_post_from_args( $args );
+    
+    //setup_postdata() does not work on this part, we have to set global post manually and reset it.
+    //setting it globally fixes issues with hook that contain functions that doesn't use $ID or $post such as get_permalink()
+
+    global $post;
+
+    $original_post = $post;
+
+    $post = $current_post;
+
+    if ( !$post ) {
       return $result;
     }
 
@@ -162,6 +171,8 @@ class Cornerstone_Dynamic_Content_Post extends Cornerstone_Plugin_Component {
         $result = "$post->ID";
         break;
     }
+
+    $post = $original_post;
 
     return $result;
   }

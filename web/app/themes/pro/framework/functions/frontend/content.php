@@ -18,6 +18,7 @@
 //   07. Legacy Header Widget Areas
 //   08. Legacy Slider Below with New Masthead
 //   09. Legacy Slider Above with New Masthead
+//   10. Comment template schema
 // =============================================================================
 
 // Get Content Layout
@@ -195,11 +196,38 @@ endif;
 
 if ( ! function_exists( 'x_scroll_top_anchor' ) ) :
   function x_scroll_top_anchor() {
-
+    
     if ( x_get_option( 'x_footer_scroll_top_display' ) == '1' ) : ?>
 
       <a class="x-scroll-top <?php echo x_get_option( 'x_footer_scroll_top_position' ); ?> fade" title="<?php esc_attr_e( 'Back to Top', '__x__' ); ?>">
-        <i class="x-icon-angle-up" data-x-icon-s="&#xf106;"></i>
+        <?php
+          $fa_solid_enable = (bool) x_get_option( 'x_font_awesome_solid_enable' );
+          $fa_regular_enable = (bool) x_get_option( 'x_font_awesome_regular_enable' );
+          $fa_light_enable = (bool) x_get_option( 'x_font_awesome_light_enable' );
+          
+          if ( $fa_solid_enable || $fa_regular_enable || $fa_light_enable ){
+            // light
+            if ( $fa_light_enable ){
+              $data_x_icon = 'data-x-icon-l';
+            }
+
+            // regular
+            if ( $fa_regular_enable ){
+              $data_x_icon = 'data-x-icon-o';
+            }
+
+            // solid
+            if ( $fa_solid_enable ){
+              $data_x_icon = 'data-x-icon-s';
+            }
+          }else{
+            // default
+            $data_x_icon = 'data-x-icon-l';
+          }
+
+        ?>
+        
+        <i class="x-icon-angle-up" <?php echo $data_x_icon . '="&#xf106;"'; ?>></i>
       </a>
 
       <script>
@@ -310,4 +338,24 @@ if ( ! function_exists( 'x_legacy_slider_below_with_new_masthead' ) ) :
     x_get_view( 'global', '_slider-below' );
   }
   add_action( 'x_after_masthead_end', 'x_legacy_slider_below_with_new_masthead' );
+endif;
+
+// Comment template schema
+// =============================================================================
+
+if ( ! function_exists( 'x_comment_schema' ) ) :
+  function x_comment_schema ( $which ) {
+
+    if ( X_WOOCOMMERCE_IS_ACTIVE && empty( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating', true ) ) && x_is_product() ) return;
+
+    switch ( $which ) {
+      case 'li':
+          echo x_is_product() ? 'itemprop="review" itemscope itemtype="https://schema.org/Review"' : 'itemprop="comment" itemscope itemtype="https://schema.org/Comment"';
+        break;
+      case 'item':
+          echo x_is_product() ? '<div class="visually-hidden" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing"><span itemprop="name">'.get_the_title().'</span></div>' : '';
+        break;      
+    }
+
+  }
 endif;

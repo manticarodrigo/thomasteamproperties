@@ -129,7 +129,7 @@ class X_Validation {
       return array(
         'message' => __( 'This looks like a <strong>brand new license that hasn&apos;t been added to a Themeco account yet.</strong> Login to your existing account or register a new one to continue.', '__x__' ),
         'button'  => __( 'Login or Register', '__x__' ),
-        'url'     => add_query_arg( $this->out_params(), 'https://theme.co/apex/product-validation/' )
+        'url'     => add_query_arg( $this->out_params(), 'https://theme.co/docs/product-validation/' )
       );
     }
 

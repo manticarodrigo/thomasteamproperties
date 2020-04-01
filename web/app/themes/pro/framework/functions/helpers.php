@@ -102,10 +102,8 @@ function x_make_protocol_relative( $url ) {
 if ( ! function_exists( 'x_get_featured_image_url' ) ) :
   function x_get_featured_image_url( $size = 'full' ) {
 
-    $featured_image     = wp_get_attachment_image_src( get_post_thumbnail_id(), $size );
-    $featured_image_url = $featured_image[0];
-
-    return $featured_image_url;
+    $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id(), $size );
+    return ( is_array($featured_image) && count($featured_image) > 0 ) ? $featured_image[0] : '';
 
   }
 endif;
@@ -118,16 +116,13 @@ endif;
 if ( ! function_exists( 'x_get_featured_image_with_fallback_url' ) ) :
   function x_get_featured_image_with_fallback_url( $size = 'full' ) {
 
-    $featured_image_url        = x_get_featured_image_url( $size );
-    $social_fallback_image_url = get_option( 'x_social_fallback_image' );
+    $featured_image_url = x_get_featured_image_url( $size );
 
-    if ( $featured_image_url != NULL ) {
-      $image_url = $featured_image_url;
-    } else {
-      $image_url = $social_fallback_image_url;
+    if (!$featured_image_url) {
+      return get_option( 'x_social_fallback_image' );
     }
 
-    return $image_url;
+    return $featured_image_url;
 
   }
 endif;

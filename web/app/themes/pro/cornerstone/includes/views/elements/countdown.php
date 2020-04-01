@@ -32,7 +32,7 @@ $timestamp_diff = strtotime( $countdown_end ) - time();
 // ------------
 
 $atts = array(
-  'class' => x_attr_class( array( $mod_id, 'x-countdown', 'has-' . $countdown_labels_output . '-labels', $class ) ),
+  'class' => x_attr_class( array( $mod_id, 'x-countdown', 'has-' . $countdown_labels_output . '-labels', $class ) )  
 );
 
 if ( ! empty( $countdown_aria_content ) ) {
@@ -50,6 +50,7 @@ if ( isset( $id ) && ! empty( $id ) ) {
 if ( $timestamp_diff > 0 ) {
   $counter_data = array(
     'end'                    => cs_decode_shortcode_attribute( date( 'Y-m-d\TH:i:s', strtotime( $countdown_end ) ) ), // reformat the date to ensure it can be parsed by all browsers (Safari)
+    'serverTime'             => cs_decode_shortcode_attribute( date( 'Y-m-d\TH:i:s', strtotime( current_time( 'mysql' ) ) ) ),
     'hideEmpty'              => cs_decode_shortcode_attribute( $countdown_hide_empty ),
     'hideOnComplete'         => cs_decode_shortcode_attribute( $countdown_hide_on_end ),
     'leadingZeros'           => cs_decode_shortcode_attribute( $countdown_leading_zeros ),

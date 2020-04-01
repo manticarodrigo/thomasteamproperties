@@ -214,7 +214,7 @@ class Cornerstone_Shortcode_Finder extends Cornerstone_Plugin_Component {
 
           $post = get_post( $post_ID );
 
-          $post_data = $post->post_content;
+          $post_data = $post == null ? '' : $post->post_content;
 
       }
 

@@ -243,7 +243,7 @@ class X_Validation_Updates {
 			if ( false === ( $addons = get_site_option( 'x_extension_list', false ) ) ) {
 				return array(
 					'error' => true,
-					'message' => __( 'Could not retrieve extensions list. For assistance, please start by reviewing our article on troubleshooting <a href="https://theme.co/apex/kb/connection-issues/">connection issues.</a>', '__x__' ),
+					'message' => __( 'Could not retrieve extensions list. For assistance, please start by reviewing our article on troubleshooting <a href="https://theme.co/docs/problems-with-product-validation/">connection issues.</a>', '__x__' ),
 					'verbose' => x_tco()->updates()->get_errors()
 				);
 			}

@@ -6,6 +6,7 @@ class Cornerstone_Dynamic_Content_WooCommerce extends Cornerstone_Plugin_Compone
   public function setup() {
     add_filter('cs_dynamic_content_woocommerce', array( $this, 'supply_field' ), 10, 4 );
     add_action('cs_dynamic_content_setup', array( $this, 'register' ) );
+    add_filter('cs_dynamic_content_post_id', array($this, 'shop_page_id') );
     add_filter( 'woocommerce_add_to_cart_fragments', array( $this, 'add_to_cart_fragment' ) );
   }
 
@@ -128,6 +129,13 @@ class Cornerstone_Dynamic_Content_WooCommerce extends Cornerstone_Plugin_Compone
     $fragments['[data-csdc-wc-cart-items]'] = $this->render_cart_items();
     $fragments['[data-csdc-wc-cart-total]'] = $this->render_cart_total();
     return $fragments;
+
+  }
+
+  public function shop_page_id ( $id ) {
+
+    return !is_singular('product') && 
+    function_exists('is_shop') && ( is_shop() || is_woocommerce() || is_product_category() || is_product_tag() || is_cart() || is_checkout() ) ? wc_get_page_id ('shop') : $id;
 
   }
 }

@@ -95,6 +95,7 @@ return array(
   'permissions.paste'              => __( 'Paste', 'cornerstone' ),
   'permissions.paste-style'        => __( 'Paste Style', 'cornerstone' ),
   'permissions.show-in-library'    => __( 'Show In Library','__x__' ),
+  'permissions.clear-style'        => __( 'Clear Style', 'cornerstone' ),
   'permissions.apply-preset'       => __( 'Apply Preset', '__x__' ),
   'permissions.save-preset'        => __( 'Save Preset', '__x__' ),
   'permissions.design-controls'    => __( 'Design Controls', '__x__' ),

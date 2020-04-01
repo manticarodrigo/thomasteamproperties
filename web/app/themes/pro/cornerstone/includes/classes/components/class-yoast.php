@@ -10,7 +10,7 @@ class Cornerstone_Yoast extends Cornerstone_Plugin_Component {
 
   public function setup() {
 
-  		add_filter('wpseo_sitemap_urlimages', array($this, 'get_images'), 10, 2 );
+  		add_filter('wpseo_sitemap_urlimages', array($this, 'get_images'), 10, 2 );      
 
       if( class_exists('WPSEO_Link_Content_Processor') && defined( 'WPSEO_PREMIUM_PLUGIN_FILE' ) ) { //If Yoast Premium
 

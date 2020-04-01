@@ -109,7 +109,8 @@ class Cornerstone_Element_Front_End extends Cornerstone_Plugin_Component {
       $data = $this->lookup_element_data( $atts['_id'], $target_id );
     }
 
-    $type = ( isset( $atts['_type'] ) ) ? $atts['_type'] : isset( $data['_type'] ) ? $data['_type'] : null;
+    $type = isset( $data['_type'] ) ? $data['_type'] : null;
+    $type = isset( $atts['_type'] ) ? $atts['_type'] : $type;
 
     if ( ! $type ) {
 

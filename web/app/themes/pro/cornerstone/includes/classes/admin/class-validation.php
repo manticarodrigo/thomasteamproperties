@@ -81,7 +81,7 @@ class Cornerstone_Validation extends Cornerstone_Plugin_Component {
       return array(
         'message' => csi18n('admin.validation-msg-new-code'),
         'button'  => csi18n('admin.validation-login'),
-        'url'     => add_query_arg( $this->out_params(), 'https://theme.co/apex/product-validation/' )
+        'url'     => add_query_arg( $this->out_params(), 'https://theme.co/docs/product-validation/' )
       );
     }
 

@@ -127,7 +127,7 @@ class Cornerstone_Dynamic_Content extends Cornerstone_Plugin_Component {
       $result = rawurlencode( $result );
     }
 
-    return is_string($result) ? $result : '';
+    return is_string($result) ? do_shortcode( $result ) : '';
 
   }
 
@@ -167,7 +167,7 @@ class Cornerstone_Dynamic_Content extends Cornerstone_Plugin_Component {
 
   public function get_post_from_args( $args ) {
     return $this->get_cached_post(
-      isset( $args['post'] ) ? $args['post'] : get_the_ID()
+      isset( $args['post'] ) ? $args['post'] : apply_filters( 'cs_dynamic_content_post_id', get_the_ID() )
     );
   }
 
@@ -285,8 +285,8 @@ class Cornerstone_Dynamic_Content extends Cornerstone_Plugin_Component {
   public function get_user_from_args( $args ) {
     $user_id = isset($args['user']) ? $args['user'] : get_current_user_id();
 
-    if ('author' === $user_id) {
-      $user_id = get_the_author_meta('ID');
+    if ('author' === $user_id ) {
+      $user_id = get_post_field( 'post_author', get_queried_object_id() );
     }
     return $this->get_cached_user( $user_id );
   }

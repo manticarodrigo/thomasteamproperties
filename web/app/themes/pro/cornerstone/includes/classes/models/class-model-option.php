@@ -4,9 +4,15 @@ class Cornerstone_Model_Option extends Cornerstone_Plugin_Component {
 
   public $name = 'option';
 
+  // Lookup an option, and persist defaults if it doesn't exist
+  // This lets us populate defaults single time, meaning IDs can be unique but consistent
   public function lookup( $option ) {
-    $default = apply_filters( "cornerstone_option_model_save_$option", apply_filters( "cornerstone_option_model_defaults_$option", null ) );
-    return apply_filters( "cornerstone_option_model_load_$option", get_option( $option, $default ) );
+    $stored = get_option( $option );
+    if ($stored === false ) {
+      $stored = apply_filters( "cornerstone_option_model_save_$option", apply_filters( "cornerstone_option_model_defaults_$option", null ) );
+      update_option( $option, $stored );
+    }
+    return apply_filters( "cornerstone_option_model_load_$option", $stored );
   }
 
   public function query( $params = array() ) {

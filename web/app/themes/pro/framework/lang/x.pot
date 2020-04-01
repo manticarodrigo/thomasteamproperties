@@ -1,4 +1,4 @@
-# Copyright (C) 2019 __x__
+# Copyright (C) 2020 __x__
 # This file is distributed under the same license as the __x__ package.
 msgid ""
 msgstr ""
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Reply"
 msgstr ""
 
-#: buddypress/activity/comment.php:46, buddypress/groups/single/admin.php:344, buddypress/members/single/messages/messages-loop.php:45, buddypress/members/single/messages/single.php:24, buddypress/members/single/settings/delete-account.php:28, framework/functions/pro/i18n/admin.php:106, framework/functions/pro/i18n/app.php:752
+#: buddypress/activity/comment.php:46, buddypress/groups/single/admin.php:344, buddypress/members/single/messages/messages-loop.php:45, buddypress/members/single/messages/single.php:24, buddypress/members/single/settings/delete-account.php:28, framework/functions/pro/i18n/admin.php:107, framework/functions/pro/i18n/app.php:752
 msgid "Delete"
 msgstr ""
 
@@ -421,7 +421,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: buddypress/groups/create.php:285, framework/functions/pro/i18n/admin.php:103, framework/functions/pro/i18n/app.php:112
+#: buddypress/groups/create.php:285, framework/functions/pro/i18n/admin.php:104, framework/functions/pro/i18n/app.php:112
 msgid "Create"
 msgstr ""
 
@@ -671,7 +671,7 @@ msgid "Nope"
 msgstr ""
 
 #: framework/functions/setup.php:305
-msgid "Could not establish connection. For assistance, please start by reviewing our article on troubleshooting <a href=\"https://theme.co/apex/kb/connection-issues/\">connection issues.</a>"
+msgid "Could not establish connection. For assistance, please start by reviewing our article on troubleshooting <a href=\"https://theme.co/docs/problems-with-product-validation/\">connection issues.</a>"
 msgstr ""
 
 #: framework/functions/theme-options.php:68, framework/functions/admin/meta-entries.php:276
@@ -1786,7 +1786,7 @@ msgstr ""
 msgid "Columns"
 msgstr ""
 
-#: framework/functions/theme-options.php:1576, framework/functions/frontend/breadcrumbs.php:219
+#: framework/functions/theme-options.php:1576, framework/functions/frontend/breadcrumbs.php:221
 msgid "Archives"
 msgstr ""
 
@@ -2650,67 +2650,67 @@ msgstr ""
 msgid "Waiting to activate&hellip;"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:102, framework/functions/pro/i18n/app.php:491
+#: framework/functions/admin/class-validation-theme-options-manager.php:108, framework/functions/pro/i18n/app.php:491
 msgid "Yes, Proceed"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:103
+#: framework/functions/admin/class-validation-theme-options-manager.php:109
 msgid "No, Take me back"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:104
+#: framework/functions/admin/class-validation-theme-options-manager.php:110
 msgid "Modern browser required to use importer."
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:105
+#: framework/functions/admin/class-validation-theme-options-manager.php:111
 msgid "Importing&hellip;"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:106
+#: framework/functions/admin/class-validation-theme-options-manager.php:112
 msgid "All set! Settings imported."
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:107
+#: framework/functions/admin/class-validation-theme-options-manager.php:113
 msgid "The uploaded file was not a valid XCS export."
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:108
+#: framework/functions/admin/class-validation-theme-options-manager.php:114
 msgid "This will overwrite your Theme Options and is not reversible unless you have previously made a backup of your settings. Are you sure you want to proceed?"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:109
+#: framework/functions/admin/class-validation-theme-options-manager.php:115
 msgid "Downloading XCS file&hellip;"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:110
+#: framework/functions/admin/class-validation-theme-options-manager.php:116
 msgid "Resetting&hellip;"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:111
+#: framework/functions/admin/class-validation-theme-options-manager.php:117
 msgid "Theme Options settings successfully reset!"
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:112
+#: framework/functions/admin/class-validation-theme-options-manager.php:118
 msgid "Unable to reset Theme Options."
 msgstr ""
 
-#: framework/functions/admin/class-validation-theme-options-manager.php:113
+#: framework/functions/admin/class-validation-theme-options-manager.php:119
 msgid "This will reset your Theme Options and is not reversible unless you have previously made a backup of your settings. Are you sure you want to proceed?"
 msgstr ""
 
-#: framework/functions/admin/class-validation-updates.php:81, framework/functions/pro/i18n/admin.php:140
+#: framework/functions/admin/class-validation-updates.php:81, framework/functions/pro/i18n/admin.php:141
 msgid "Nothing to report."
 msgstr ""
 
-#: framework/functions/admin/class-validation-updates.php:82, framework/functions/pro/i18n/admin.php:141
+#: framework/functions/admin/class-validation-updates.php:82, framework/functions/pro/i18n/admin.php:142
 msgid "New version available!"
 msgstr ""
 
-#: framework/functions/admin/class-validation-updates.php:83, framework/functions/pro/i18n/admin.php:142
+#: framework/functions/admin/class-validation-updates.php:83, framework/functions/pro/i18n/admin.php:143
 msgid "Unable to check for updates. Try again later."
 msgstr ""
 
-#: framework/functions/admin/class-validation-updates.php:84, framework/functions/pro/i18n/admin.php:143
+#: framework/functions/admin/class-validation-updates.php:84, framework/functions/pro/i18n/admin.php:144
 msgid "Checking&hellip;"
 msgstr ""
 
@@ -2735,7 +2735,7 @@ msgid "%s is not validated. <a href=\"%s\">Validate %s to enable automatic updat
 msgstr ""
 
 #: framework/functions/admin/class-validation-updates.php:246
-msgid "Could not retrieve extensions list. For assistance, please start by reviewing our article on troubleshooting <a href=\"https://theme.co/apex/kb/connection-issues/\">connection issues.</a>"
+msgid "Could not retrieve extensions list. For assistance, please start by reviewing our article on troubleshooting <a href=\"https://theme.co/docs/problems-with-product-validation/\">connection issues.</a>"
 msgstr ""
 
 #: framework/functions/admin/class-validation.php:65
@@ -3166,7 +3166,7 @@ msgstr ""
 msgid "Choose an accent color to be used for certain design elements."
 msgstr ""
 
-#: framework/functions/frontend/breadcrumbs.php:39, framework/functions/frontend/breadcrumbs.php:212, cornerstone/includes/elements/definitions/breadcrumbs.php:26, framework/functions/pro/i18n/admin.php:34, framework/functions/pro/i18n/app.php:184
+#: framework/functions/frontend/breadcrumbs.php:39, framework/functions/frontend/breadcrumbs.php:214, cornerstone/includes/elements/definitions/breadcrumbs.php:26, framework/functions/pro/i18n/admin.php:34, framework/functions/pro/i18n/app.php:184
 msgid "Home"
 msgstr ""
 
@@ -3174,35 +3174,35 @@ msgstr ""
 msgid "You Are Here"
 msgstr ""
 
-#: framework/functions/frontend/breadcrumbs.php:214, framework/legacy/cranium/headers/views/ethos/_landmark-header.php:53, framework/legacy/cranium/headers/views/integrity/_landmark-header.php:25, framework/legacy/cranium/headers/views/renew/_landmark-header.php:55
+#: framework/functions/frontend/breadcrumbs.php:216, framework/legacy/cranium/headers/views/ethos/_landmark-header.php:53, framework/legacy/cranium/headers/views/integrity/_landmark-header.php:25, framework/legacy/cranium/headers/views/renew/_landmark-header.php:55
 msgid "Search Results"
 msgstr ""
 
-#: framework/functions/frontend/breadcrumbs.php:215
+#: framework/functions/frontend/breadcrumbs.php:217
 msgid "404 (Page Not Found)"
 msgstr ""
 
-#: framework/functions/frontend/breadcrumbs.php:275
+#: framework/functions/frontend/breadcrumbs.php:277
 msgid "Posts by "
 msgstr ""
 
-#: framework/functions/frontend/content.php:110
+#: framework/functions/frontend/content.php:111
 msgid "Pages:"
 msgstr ""
 
-#: framework/functions/frontend/content.php:146
+#: framework/functions/frontend/content.php:147
 msgid "Previous Post"
 msgstr ""
 
-#: framework/functions/frontend/content.php:152
+#: framework/functions/frontend/content.php:153
 msgid "Next Post"
 msgstr ""
 
-#: framework/functions/frontend/content.php:201
+#: framework/functions/frontend/content.php:202
 msgid "Back to Top"
 msgstr ""
 
-#: framework/functions/frontend/content.php:282
+#: framework/functions/frontend/content.php:310
 msgid "Toggle the Widgetbar"
 msgstr ""
 
@@ -3228,75 +3228,75 @@ msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: framework/functions/frontend/ethos.php:110, framework/functions/frontend/icon.php:155, framework/functions/frontend/integrity.php:103, framework/functions/frontend/renew.php:105
+#: framework/functions/frontend/ethos.php:110, framework/functions/frontend/icon.php:156, framework/functions/frontend/integrity.php:103, framework/functions/frontend/renew.php:105
 msgid "Leave a comment on: &ldquo;%s&rdquo;"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:205
+#: framework/functions/frontend/ethos.php:208
 msgid "See All Posts"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:240, framework/functions/frontend/ethos.php:242, framework/views/ethos/_index-featured.php:20, framework/views/ethos/_index-featured.php:22, framework/views/ethos/_post-slider.php:80
+#: framework/functions/frontend/ethos.php:243, framework/functions/frontend/ethos.php:245, framework/views/ethos/_index-featured.php:20, framework/views/ethos/_index-featured.php:22, framework/views/ethos/_post-slider.php:80
 msgid "View Post"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:331, framework/functions/frontend/icon.php:78, framework/functions/frontend/integrity.php:170, framework/functions/frontend/renew.php:172
+#: framework/functions/frontend/ethos.php:334, framework/functions/frontend/icon.php:78, framework/functions/frontend/integrity.php:170, framework/functions/frontend/renew.php:172
 msgid "Pingback:"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:331, framework/functions/frontend/icon.php:78, framework/functions/frontend/integrity.php:170, framework/functions/frontend/renew.php:172
+#: framework/functions/frontend/ethos.php:334, framework/functions/frontend/icon.php:78, framework/functions/frontend/integrity.php:170, framework/functions/frontend/renew.php:172
 msgid "(Edit)"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:345, framework/functions/plugins/visual-composer.php:3271
+#: framework/functions/frontend/ethos.php:348, framework/functions/plugins/visual-composer.php:3271
 msgid "Author"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:355, framework/functions/frontend/icon.php:87
+#: framework/functions/frontend/ethos.php:359, framework/functions/frontend/icon.php:87
 msgid "%1$s"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:361, framework/functions/frontend/integrity.php:219, framework/functions/frontend/renew.php:195
+#: framework/functions/frontend/ethos.php:365, framework/functions/frontend/integrity.php:220, framework/functions/frontend/renew.php:196
 msgid "Reply <span class=\"comment-reply-link-after\"><i class=\"x-icon-reply\" data-x-icon-s=\"&#xf3e5;\"></i></span>"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:363
+#: framework/functions/frontend/ethos.php:367
 msgid "Edit <i class=\"x-icon-edit\" data-x-icon-s=\"&#xf044;\"></i>"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:372, framework/functions/frontend/icon.php:109, framework/functions/frontend/integrity.php:205, framework/functions/frontend/renew.php:206
+#: framework/functions/frontend/ethos.php:376, framework/functions/frontend/icon.php:110, framework/functions/frontend/integrity.php:206, framework/functions/frontend/renew.php:207
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:373, framework/functions/frontend/icon.php:110, framework/functions/frontend/integrity.php:206, framework/functions/frontend/renew.php:207
+#: framework/functions/frontend/ethos.php:377, framework/functions/frontend/icon.php:111, framework/functions/frontend/integrity.php:207, framework/functions/frontend/renew.php:208
 msgid "out of 5"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:379, framework/functions/frontend/icon.php:123, framework/functions/frontend/integrity.php:212, framework/functions/frontend/renew.php:223
+#: framework/functions/frontend/ethos.php:383, framework/functions/frontend/icon.php:124, framework/functions/frontend/integrity.php:213, framework/functions/frontend/renew.php:224
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:409, framework/functions/pro/i18n/admin.php:63, framework/functions/pro/i18n/admin.php:168, framework/functions/pro/i18n/app.php:118
+#: framework/functions/frontend/ethos.php:413, framework/functions/pro/i18n/admin.php:63, framework/functions/pro/i18n/admin.php:169, framework/functions/pro/i18n/app.php:118
 msgid "Name"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:410
+#: framework/functions/frontend/ethos.php:414
 msgid "Your Name"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:414, framework/functions/plugins/visual-composer.php:3524, framework/functions/pro/i18n/app.php:403
+#: framework/functions/frontend/ethos.php:418, framework/functions/plugins/visual-composer.php:3524, framework/functions/pro/i18n/app.php:403
 msgid "Email"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:415
+#: framework/functions/frontend/ethos.php:419
 msgid "Your Email"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:419
+#: framework/functions/frontend/ethos.php:423
 msgid "Website"
 msgstr ""
 
-#: framework/functions/frontend/ethos.php:420
+#: framework/functions/frontend/ethos.php:424
 msgid "Your Website"
 msgstr ""
 
@@ -3304,7 +3304,7 @@ msgstr ""
 msgid "Permalink to: \"%s\""
 msgstr ""
 
-#: framework/functions/frontend/icon.php:89, framework/functions/frontend/integrity.php:196, framework/functions/frontend/renew.php:214
+#: framework/functions/frontend/icon.php:89, framework/functions/frontend/integrity.php:197, framework/functions/frontend/renew.php:215
 msgid "%1$s at %2$s"
 msgstr ""
 
@@ -3316,11 +3316,11 @@ msgstr ""
 msgid "Post<br>Author"
 msgstr ""
 
-#: framework/functions/frontend/icon.php:119
+#: framework/functions/frontend/icon.php:120
 msgid "%s Edit"
 msgstr ""
 
-#: framework/functions/frontend/integrity.php:201, framework/functions/frontend/renew.php:219
+#: framework/functions/frontend/integrity.php:202, framework/functions/frontend/renew.php:220
 msgid "<i class=\"x-icon-edit\" data-x-icon-s=\"&#xf044;\"></i> Edit"
 msgstr ""
 
@@ -5052,15 +5052,15 @@ msgstr ""
 msgid "Select to enable the AJAX functionality of your form."
 msgstr ""
 
-#: framework/functions/plugins/woocommerce.php:261, framework/functions/plugins/woocommerce.php:263
+#: framework/functions/plugins/woocommerce.php:263, framework/functions/plugins/woocommerce.php:265
 msgid "There doesn&lsquo;t seem to be any available shipping methods. Please double check your address, or contact us if you need any help."
 msgstr ""
 
-#: framework/functions/plugins/woocommerce.php:281, framework/functions/plugins/woocommerce.php:281
+#: framework/functions/plugins/woocommerce.php:283, framework/functions/plugins/woocommerce.php:283
 msgid "Apply Coupon"
 msgstr ""
 
-#: framework/functions/plugins/woocommerce.php:393
+#: framework/functions/plugins/woocommerce.php:419
 msgid "%d Item"
 msgid_plural "%d Items"
 msgstr[0] ""
@@ -5334,7 +5334,7 @@ msgstr ""
 msgid "Editing '%s' Profile Group"
 msgstr ""
 
-#: buddypress/members/single/profile/edit.php:33, framework/functions/pro/i18n/admin.php:104
+#: buddypress/members/single/profile/edit.php:33, framework/functions/pro/i18n/admin.php:105
 msgid "Change"
 msgstr ""
 
@@ -6898,7 +6898,7 @@ msgstr ""
 msgid "Initial"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/breadcrumbs.php:250, cornerstone/includes/elements/definitions/breadcrumbs.php:255, cornerstone/includes/elements/definitions/breadcrumbs.php:704, cornerstone/includes/elements/definitions/breadcrumbs.php:720, cornerstone/includes/elements/definitions/nav-dropdown.php:98, cornerstone/includes/elements/definitions/nav-layered.php:107, cornerstone/includes/elements/definitions/nav-modal.php:103
+#: cornerstone/includes/elements/definitions/breadcrumbs.php:250, cornerstone/includes/elements/definitions/breadcrumbs.php:255, cornerstone/includes/elements/definitions/breadcrumbs.php:704, cornerstone/includes/elements/definitions/breadcrumbs.php:720, cornerstone/includes/elements/definitions/nav-dropdown.php:99, cornerstone/includes/elements/definitions/nav-layered.php:107, cornerstone/includes/elements/definitions/nav-modal.php:103
 msgid "Links"
 msgstr ""
 
@@ -7102,7 +7102,7 @@ msgstr ""
 msgid "Formatting"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/content-area-dropdown.php:61, cornerstone/includes/elements/definitions/nav-dropdown.php:60, cornerstone/includes/elements/definitions/search-dropdown.php:66, cornerstone/includes/elements/definitions/tp-bbp-dropdown.php:67, cornerstone/includes/elements/definitions/tp-bp-dropdown.php:75, cornerstone/includes/elements/definitions/tp-wc-cart-dropdown.php:84
+#: cornerstone/includes/elements/definitions/content-area-dropdown.php:61, cornerstone/includes/elements/definitions/nav-dropdown.php:61, cornerstone/includes/elements/definitions/search-dropdown.php:66, cornerstone/includes/elements/definitions/tp-bbp-dropdown.php:67, cornerstone/includes/elements/definitions/tp-bp-dropdown.php:75, cornerstone/includes/elements/definitions/tp-wc-cart-dropdown.php:84
 msgid "Toggle Dropdown Content"
 msgstr ""
 
@@ -7430,31 +7430,31 @@ msgstr ""
 msgid "Navigation Collapsed"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/nav-collapsed.php:105, cornerstone/includes/elements/definitions/nav-inline.php:79
+#: cornerstone/includes/elements/definitions/nav-collapsed.php:105, cornerstone/includes/elements/definitions/nav-inline.php:80
 msgid "Top Links"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/nav-collapsed.php:107, cornerstone/includes/elements/definitions/nav-inline.php:81
+#: cornerstone/includes/elements/definitions/nav-collapsed.php:107, cornerstone/includes/elements/definitions/nav-inline.php:82
 msgid "Top Menu Items"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/nav-collapsed.php:113, cornerstone/includes/elements/definitions/nav-inline.php:88
+#: cornerstone/includes/elements/definitions/nav-collapsed.php:113, cornerstone/includes/elements/definitions/nav-inline.php:89
 msgid "Sub Links"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/nav-collapsed.php:115, cornerstone/includes/elements/definitions/nav-inline.php:90
+#: cornerstone/includes/elements/definitions/nav-collapsed.php:115, cornerstone/includes/elements/definitions/nav-inline.php:91
 msgid "Sub Menu Items"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/nav-dropdown.php:77
+#: cornerstone/includes/elements/definitions/nav-dropdown.php:78
 msgid "Navigation Dropdown"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/nav-dropdown.php:100, cornerstone/includes/elements/definitions/nav-layered.php:109, cornerstone/includes/elements/definitions/nav-modal.php:105
+#: cornerstone/includes/elements/definitions/nav-dropdown.php:101, cornerstone/includes/elements/definitions/nav-layered.php:109, cornerstone/includes/elements/definitions/nav-modal.php:105
 msgid "Menu Items"
 msgstr ""
 
-#: cornerstone/includes/elements/definitions/nav-inline.php:59
+#: cornerstone/includes/elements/definitions/nav-inline.php:60
 msgid "Navigation Inline"
 msgstr ""
 
@@ -7915,7 +7915,7 @@ msgid "Get help at any time, day or night"
 msgstr ""
 
 #: framework/functions/admin/markup/page-home-box-support.php:47, framework/functions/admin/markup/page-home-box-support.php:54
-msgid "Knowledge Base"
+msgid "Docs"
 msgstr ""
 
 #: framework/functions/admin/markup/page-home-box-support.php:48
@@ -8038,11 +8038,11 @@ msgstr ""
 msgid "Sorry! Unable to Save"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:46, framework/functions/pro/i18n/admin.php:189
+#: framework/functions/pro/i18n/admin.php:46, framework/functions/pro/i18n/admin.php:190
 msgid "System"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:48, framework/functions/pro/i18n/admin.php:50, framework/functions/pro/i18n/admin.php:190, framework/functions/pro/i18n/admin.php:195
+#: framework/functions/pro/i18n/admin.php:48, framework/functions/pro/i18n/admin.php:50, framework/functions/pro/i18n/admin.php:191, framework/functions/pro/i18n/admin.php:196
 msgid "Clear Style Cache"
 msgstr ""
 
@@ -8054,7 +8054,7 @@ msgstr ""
 msgid "Clearing&hellip;"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:52, framework/functions/pro/i18n/admin.php:197
+#: framework/functions/pro/i18n/admin.php:52, framework/functions/pro/i18n/admin.php:198
 msgid "Cleared!"
 msgstr ""
 
@@ -8190,302 +8190,302 @@ msgstr ""
 msgid "Show In Library"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:98, framework/functions/pro/i18n/app.php:482
+#: framework/functions/pro/i18n/admin.php:99, framework/functions/pro/i18n/app.php:482
 msgid "Apply Preset"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:99, framework/functions/pro/i18n/app.php:481
+#: framework/functions/pro/i18n/admin.php:100, framework/functions/pro/i18n/app.php:481
 msgid "Save Preset"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:100
+#: framework/functions/pro/i18n/admin.php:101
 msgid "Design Controls"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:101
+#: framework/functions/pro/i18n/admin.php:102
 msgid "Customize Controls"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:105
+#: framework/functions/pro/i18n/admin.php:106
 msgid "Rename"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:108
+#: framework/functions/pro/i18n/admin.php:109
 msgid "Manage Google"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:109
+#: framework/functions/pro/i18n/admin.php:110
 msgid "Manage Adobe Fonts"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:110
+#: framework/functions/pro/i18n/admin.php:111
 msgid "Manage Custom Fonts"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:112
+#: framework/functions/pro/i18n/admin.php:113
 msgid "Create From Template"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:113
+#: framework/functions/pro/i18n/admin.php:114
 msgid "Save As Template"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:114
+#: framework/functions/pro/i18n/admin.php:115
 msgid "Manage Assignments"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:115
+#: framework/functions/pro/i18n/admin.php:116
 msgid "Add Elements"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:116
+#: framework/functions/pro/i18n/admin.php:117
 msgid "Delete Elements"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:117
+#: framework/functions/pro/i18n/admin.php:118
 msgid "Move Elements"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:118
+#: framework/functions/pro/i18n/admin.php:119
 msgid "Inspect Elements"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:120, framework/functions/pro/i18n/app.php:142
+#: framework/functions/pro/i18n/admin.php:121, framework/functions/pro/i18n/app.php:142
 msgid "Publish"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:121
+#: framework/functions/pro/i18n/admin.php:122
 msgid "Insert Templates"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:122
+#: framework/functions/pro/i18n/admin.php:123
 msgid "Save Templates"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:123, framework/functions/pro/i18n/app.php:756
+#: framework/functions/pro/i18n/admin.php:124, framework/functions/pro/i18n/app.php:756
 msgid "Manage Layout"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:124
+#: framework/functions/pro/i18n/admin.php:125
 msgid "Apply Presets"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:125
+#: framework/functions/pro/i18n/admin.php:126
 msgid "Save Presets"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:126
+#: framework/functions/pro/i18n/admin.php:127
 msgid "Edit Custom CSS"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:127
+#: framework/functions/pro/i18n/admin.php:128
 msgid "Edit Custom JS"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:128
+#: framework/functions/pro/i18n/admin.php:129
 msgid "Access Settings"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:129
+#: framework/functions/pro/i18n/admin.php:130
 msgid "Skeleton Mode"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:130
+#: framework/functions/pro/i18n/admin.php:131
 msgid "Inline Editing"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:131
+#: framework/functions/pro/i18n/admin.php:132
 msgid "Dynamic Content"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:133
+#: framework/functions/pro/i18n/admin.php:134
 msgid "Import"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:134
+#: framework/functions/pro/i18n/admin.php:135
 msgid "Download"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:135
+#: framework/functions/pro/i18n/admin.php:136
 msgid "Update Preview Image"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:136
+#: framework/functions/pro/i18n/admin.php:137
 msgid "Hide"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:137
+#: framework/functions/pro/i18n/admin.php:138
 msgid "Manage Default Presets"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:138
+#: framework/functions/pro/i18n/admin.php:139
 msgid "Access Design Cloud"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:144
+#: framework/functions/pro/i18n/admin.php:145
 msgid "Visit the <a href=\"http://theme.co/changelog/#pro\">Themeco Changelog</a> for more information."
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:145
+#: framework/functions/pro/i18n/admin.php:146
 msgid "<a href=\"%s\">Validate to enable automatic updates</a>"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:147, framework/functions/pro/i18n/app.php:558
+#: framework/functions/pro/i18n/admin.php:148, framework/functions/pro/i18n/app.php:558
 msgid "Site"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:148
+#: framework/functions/pro/i18n/admin.php:149
 msgid "WordPress Environment"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:149
+#: framework/functions/pro/i18n/admin.php:150
 msgid "Web Server Configuration"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:150
+#: framework/functions/pro/i18n/admin.php:151
 msgid "PHP Configuration"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:151
+#: framework/functions/pro/i18n/admin.php:152
 msgid "Active Theme"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:152
+#: framework/functions/pro/i18n/admin.php:153
 msgid "Active Plugins"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:153
+#: framework/functions/pro/i18n/admin.php:154
 msgid "CDN"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:155
+#: framework/functions/pro/i18n/admin.php:156
 msgid "Site URL"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:156, framework/functions/pro/i18n/app.php:811
+#: framework/functions/pro/i18n/admin.php:157, framework/functions/pro/i18n/app.php:811
 msgid "Home URL"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:157, framework/functions/pro/i18n/admin.php:169
+#: framework/functions/pro/i18n/admin.php:158, framework/functions/pro/i18n/admin.php:170
 msgid "Version"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:158
+#: framework/functions/pro/i18n/admin.php:159
 msgid "Debug is on"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:159
+#: framework/functions/pro/i18n/admin.php:160
 msgid "Language"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:160
+#: framework/functions/pro/i18n/admin.php:161
 msgid "Is Multisite"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:161
+#: framework/functions/pro/i18n/admin.php:162
 msgid "Memory Limit"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:162
+#: framework/functions/pro/i18n/admin.php:163
 msgid "Software"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:163
+#: framework/functions/pro/i18n/admin.php:164
 msgid "PHP Version"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:164
+#: framework/functions/pro/i18n/admin.php:165
 msgid "MySQL Version"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:165
+#: framework/functions/pro/i18n/admin.php:166
 msgid "Post Max Size"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:166
+#: framework/functions/pro/i18n/admin.php:167
 msgid "Time Limit"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:167
+#: framework/functions/pro/i18n/admin.php:168
 msgid "Max Upload Size"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:170
+#: framework/functions/pro/i18n/admin.php:171
 msgid "Folder"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:171
+#: framework/functions/pro/i18n/admin.php:172
 msgid "Parent Theme Name"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:172
+#: framework/functions/pro/i18n/admin.php:173
 msgid "Parent Theme Version"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:173
+#: framework/functions/pro/i18n/admin.php:174
 msgid "Parent Theme Folder"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:174
+#: framework/functions/pro/i18n/admin.php:175
 msgid "Cornerstone Status"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:175
+#: framework/functions/pro/i18n/admin.php:176
 msgid "Cornerstone Version"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:176
+#: framework/functions/pro/i18n/admin.php:177
 msgid "Must-Use Plugins"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:177
+#: framework/functions/pro/i18n/admin.php:178
 msgid "Caching Plugins"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:178
-msgstr ""
-
 #: framework/functions/pro/i18n/admin.php:179
-msgid "Other Plugins"
 msgstr ""
 
 #: framework/functions/pro/i18n/admin.php:180
+msgid "Other Plugins"
+msgstr ""
+
+#: framework/functions/pro/i18n/admin.php:181
 msgid "Click this button to check what CDN this site is using."
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:182
+#: framework/functions/pro/i18n/admin.php:183
 msgid "Check CDN"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:183
+#: framework/functions/pro/i18n/admin.php:184
 msgid "Report"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:185
+#: framework/functions/pro/i18n/admin.php:186
 msgid "Please copy and paste this information in your ticket when contacting support:"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:186
+#: framework/functions/pro/i18n/admin.php:187
 msgid "Copy Details"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:187
+#: framework/functions/pro/i18n/admin.php:188
 msgid "Copied"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:191
+#: framework/functions/pro/i18n/admin.php:192
 msgid "For slower page loads Elements will remember the CSS generated when they were last saved. This is automatically cleared when Pro is updated. It may be useful to clear manually if any Elements are missing styling"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:196
+#: framework/functions/pro/i18n/admin.php:197
 msgid "Clearing..."
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:198
+#: framework/functions/pro/i18n/admin.php:199
 msgid "Clear Style Cache Error"
 msgstr ""
 
-#: framework/functions/pro/i18n/admin.php:200
+#: framework/functions/pro/i18n/admin.php:201
 msgid "<strong>X &ndash; Shortcodes has been deactivated</strong>. This plugin is no longer a requirement of X, and can safely be deleted."
 msgstr ""
 
@@ -10419,7 +10419,7 @@ msgid "This Pro license is ​<strong>not validated</strong>​. <a href=\"%s\">
 msgstr ""
 
 #: framework/functions/pro/i18n/theme-overview.php:5
-msgid "Your license of Pro is <strong class=\"tco-c-nope\">not validated</strong>. Place your Themeco license to unlock automatic updates, access to support, and Extensions. <a href=\"https://theme.co/apex/kb/product-validation/\" target=\"_blank\">Learn more</a> about product validation or <a href=\"https://theme.co/apex/licenses/\" target=\"_blank\">manage licenses</a> directly in your Themeco account."
+msgid "Your license of Pro is <strong class=\"tco-c-nope\">not validated</strong>. Place your Themeco license to unlock automatic updates, access to support, and Extensions. <a href=\"https://theme.co/docs/product-validation/\" target=\"_blank\">Learn more</a> about product validation or <a href=\"https://theme.co/apex/licenses/\" target=\"_blank\">manage licenses</a> directly in your Themeco account."
 msgstr ""
 
 #: framework/functions/pro/i18n/theme-overview.php:6
@@ -10447,7 +10447,7 @@ msgid "This X license is ​<strong>not validated</strong>​. <a href=\"%s\">Fi
 msgstr ""
 
 #: framework/functions/x/i18n/theme-overview.php:5
-msgid "Your license of X is <strong class=\"tco-c-nope\">not validated</strong>. Place your Envato purchase code or Themeco license to unlock automatic updates, access to support, and Extensions. <a href=\"https://theme.co/apex/kb/product-validation/\" target=\"_blank\">Learn more</a> about product validation or <a href=\"https://theme.co/apex/licenses/\" target=\"_blank\">manage licenses</a> directly in your Themeco account."
+msgid "Your license of X is <strong class=\"tco-c-nope\">not validated</strong>. Place your Envato purchase code or Themeco license to unlock automatic updates, access to support, and Extensions. <a href=\"https://theme.co/docs/product-validation/\" target=\"_blank\">Learn more</a> about product validation or <a href=\"https://theme.co/apex/licenses/\" target=\"_blank\">manage licenses</a> directly in your Themeco account."
 msgstr ""
 
 #: framework/functions/x/i18n/theme-overview.php:6

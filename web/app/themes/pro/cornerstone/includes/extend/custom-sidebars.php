@@ -153,6 +153,10 @@ function ups_options_admin_init() {
   wp_enqueue_script( 'postbox' );
 
   // Register setting to store all the sidebar options in the *_options table.
+
+  // The register_setting() is also another reason why this doesn't need translation, this setup is validation type where the data is saved based on its existence upon submit.
+  // Example, switching to English doesn't list German data, nor German doesn't list the English data, the non-existing of any data upon saved are removed which is why switching to another language resets the previous one. Unfortunately, this is the limitation of register_setting().
+
   register_setting( 'ups_sidebars_options', 'ups_sidebars', 'ups_sidebars_validate' );
 
   $sidebars = get_option( 'ups_sidebars' );
@@ -231,7 +235,7 @@ function ups_sidebars_do_page() {
 //
 
 function ups_sidebar_do_meta_box( $post, $metabox ) {
-
+  
   $sidebars   = get_option( 'ups_sidebars' );
   $sidebar_id = esc_attr( $metabox['args']['id'] );
   $sidebar    = ups_sidebar_defaults( $sidebars[$sidebar_id] );
@@ -252,6 +256,15 @@ function ups_sidebar_do_meta_box( $post, $metabox ) {
   );
 
   $get_posts = new WP_Query;
+
+  //Due to the limitation of register_setting(), let's list all pages/posts data regardless of language so they can be saved at once.
+  if ( defined( 'ICL_SITEPRESS_VERSION' ) ) :
+
+    global $sitepress;
+    $current_lang = $sitepress->get_current_language();
+    $sitepress->switch_lang('all', true);
+  
+  endif;
 
   $posts = $get_posts->query( array(
     'offset'                 => 0,
@@ -289,6 +302,13 @@ function ups_sidebar_do_meta_box( $post, $metabox ) {
     $post_types[$obj->name] = $obj->label;
   }
 
+  //Reset to original language
+  if ( defined( 'ICL_SITEPRESS_VERSION' ) ) :
+    
+    $sitepress->switch_lang($current_lang, true);
+  
+  endif;
+
   ?>
 
   <div class="x-entry-and-taxonomy-lists">
@@ -297,16 +317,63 @@ function ups_sidebar_do_meta_box( $post, $metabox ) {
         <li class="wp-tab-active"><?php _e( 'All Pages and Posts', 'cornerstone' ); ?></li>
       </ul>
       <div class="wp-tab-panel">
+
         <ul id="entry-checklist" class="entry-checklist categorychecklist">
+
+          <?php $list_options = array(); ?>
+
           <?php foreach ( $posts as $post ) : ?>
-          <li>
-            <label>
-            <?php $checked = ups_checked_list_item( $post->ID, $sidebar['pages'] ); ?>
-            <input type="checkbox" class="menu-item-checkbox" name="ups_sidebars[<?php echo esc_attr( $sidebar_id ); ?>][pages][<?php echo esc_attr( $post->ID ); ?>]" value="<?php echo esc_attr( $post->post_title ); ?>"<?php echo $checked; ?>>
-            <?php echo esc_html( $post->post_title ); ?>
-            </label>
-          </li>
+          
+            <?php 
+              
+              $language_code = 'all'; //reset for every loop in case WPML is inactive
+
+              if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
+                $language_details = $sitepress->get_element_language_details( $post->ID, 'post_' . $post->post_type );
+                if ($language_details) {
+                  $language_code = $language_details->language_code;
+                } 
+              }
+
+                    ob_start();
+            ?>
+
+                  <li>
+                    <label>
+                    <?php $checked = ups_checked_list_item( $post->ID, $sidebar['pages'] ); ?>
+                    <input type="checkbox" class="menu-item-checkbox" name="ups_sidebars[<?php echo esc_attr( $sidebar_id ); ?>][pages][<?php echo esc_attr( $post->ID ); ?>]" value="<?php echo esc_attr( $post->post_title ); ?>"<?php echo $checked; ?>>
+                    <?php echo esc_html( $post->post_title ); ?>
+                    </label>
+                  </li>
+          
+                  <?php 
+
+                  if( !isset( $list_options[ $language_code ] ) ) $list_options[ $language_code ] = ''; //prevents warning and notices
+
+                  $list_options[ $language_code ] .= ob_get_clean(); 
+
+                  ?>
+
           <?php endforeach; wp_reset_postdata(); ?>
+
+          <?php
+
+          //Let's display all grouped options
+          $languages = array( 'all' => array( 'native_name' => 'All') );
+          if ( defined( 'ICL_SITEPRESS_VERSION' ) ) $languages = apply_filters( 'wpml_active_languages', $languages, 'orderby=id&order=desc' ); //all is by default once WPML is inactive
+
+          foreach ($languages as $code => $language) : ?>
+            
+            <?php if ($code !== 'all') : ?>
+
+              <li><hr><img src="<?php echo $language['country_flag_url'] ?>"> <?php echo $language['native_name'] ?><hr></li>
+
+            <?php endif; ?>
+
+            <?php echo $list_options[$code] ?>
+
+          <?php endforeach; ?>
+
         </ul>
       </div>
     </div>
@@ -316,15 +383,56 @@ function ups_sidebar_do_meta_box( $post, $metabox ) {
       </ul>
       <div class="wp-tab-panel">
         <ul id="taxonomy-checklist" class="taxonomy-checklist categorychecklist">
+          
+          <?php $list_options = array(); ?>        
+
           <?php foreach ( $taxonomies as $taxonomy ) : ?>
-          <li>
-            <label>
-            <?php $checked = ups_checked_list_item( $taxonomy->term_id, $sidebar['taxonomies'] ); ?>
-            <input type="checkbox" class="menu-item-checkbox" name="ups_sidebars[<?php echo esc_attr( $sidebar_id ); ?>][taxonomies][<?php echo esc_attr( $taxonomy->term_id ); ?>]" value="<?php echo esc_attr( $taxonomy->name ); ?>"<?php echo $checked; ?>>
-            <?php echo esc_html( $taxonomy->name ); ?>
-            </label>
-          </li>
+
+              <?php 
+                
+                $language_code = 'all'; //reset for every loop in case WPML is inactive
+
+                if ( defined( 'ICL_SITEPRESS_VERSION' ) ) {
+                  $language_details = $sitepress->get_element_language_details( $taxonomy->term_id, 'tax_' . $taxonomy->taxonomy );
+                  if ($language_details) {
+                    $language_code = $language_details->language_code;
+                  } 
+                }
+
+                      ob_start();
+              ?>
+              
+                  <li>
+                    <label>
+                    <?php $checked = ups_checked_list_item( $taxonomy->term_id, $sidebar['taxonomies'] ); ?>
+                    <input type="checkbox" class="menu-item-checkbox" name="ups_sidebars[<?php echo esc_attr( $sidebar_id ); ?>][taxonomies][<?php echo esc_attr( $taxonomy->term_id ); ?>]" value="<?php echo esc_attr( $taxonomy->name ); ?>"<?php echo $checked; ?>>
+                    <?php echo esc_html( $taxonomy->name ); ?>
+                    </label>
+                  </li>
+
+                  <?php 
+
+                  if( !isset( $list_options[ $language_code ] ) ) $list_options[ $language_code ] = ''; //prevents warning and notices
+
+                  $list_options[ $language_code ] .= ob_get_clean(); 
+
+                  ?>
+
           <?php endforeach; wp_reset_postdata(); ?>
+
+
+          <?php foreach ($languages as $code => $language) : ?>
+            
+            <?php if ($code !== 'all') : ?>
+
+              <li><hr><img src="<?php echo $language['country_flag_url'] ?>"> <?php echo $language['native_name'] ?><hr></li>
+
+            <?php endif; ?>
+
+            <?php echo $list_options[$code] ?>
+
+          <?php endforeach; ?>
+
         </ul>
       </div>
     </div>

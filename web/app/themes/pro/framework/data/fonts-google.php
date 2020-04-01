@@ -108,6 +108,22 @@ return array(
       '400'
     )
   ),
+  'alata' => array(
+    'source' => 'google',
+    'family' => 'Alata',
+    'stack' => '"Alata", sans-serif',
+    'weights' => array(
+      '400'
+    )
+  ),
+  'alatsi' => array(
+    'source' => 'google',
+    'family' => 'Alatsi',
+    'stack' => '"Alatsi", sans-serif',
+    'weights' => array(
+      '400'
+    )
+  ),
   'aldrich' => array(
     'source' => 'google',
     'family' => 'Aldrich',
@@ -285,6 +301,17 @@ return array(
     'stack' => '"Allura", handwriting',
     'weights' => array(
       '400'
+    )
+  ),
+  'almarai' => array(
+    'source' => 'google',
+    'family' => 'Almarai',
+    'stack' => '"Almarai", sans-serif',
+    'weights' => array(
+      '300',
+      '400',
+      '700',
+      '800'
     )
   ),
   'almendra' => array(
@@ -1081,6 +1108,15 @@ return array(
       '400'
     )
   ),
+  'baskervville' => array(
+    'source' => 'google',
+    'family' => 'Baskervville',
+    'stack' => '"Baskervville", serif',
+    'weights' => array(
+      '400',
+      '400i'
+    )
+  ),
   'battambang' => array(
     'source' => 'google',
     'family' => 'Battambang',
@@ -1102,6 +1138,35 @@ return array(
     'source' => 'google',
     'family' => 'Bayon',
     'stack' => '"Bayon", display',
+    'weights' => array(
+      '400'
+    )
+  ),
+  'bevietnam' => array(
+    'source' => 'google',
+    'family' => 'Be Vietnam',
+    'stack' => '"Be Vietnam", sans-serif',
+    'weights' => array(
+      '100',
+      '100i',
+      '300',
+      '300i',
+      '400',
+      '400i',
+      '500',
+      '500i',
+      '600',
+      '600i',
+      '700',
+      '700i',
+      '800',
+      '800i'
+    )
+  ),
+  'bebasneue' => array(
+    'source' => 'google',
+    'family' => 'Bebas Neue',
+    'stack' => '"Bebas Neue", display',
     'weights' => array(
       '400'
     )
@@ -1170,6 +1235,36 @@ return array(
     'stack' => '"Bevan", display',
     'weights' => array(
       '400'
+    )
+  ),
+  'bigshouldersdisplay' => array(
+    'source' => 'google',
+    'family' => 'Big Shoulders Display',
+    'stack' => '"Big Shoulders Display", display',
+    'weights' => array(
+      '100',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900'
+    )
+  ),
+  'bigshoulderstext' => array(
+    'source' => 'google',
+    'family' => 'Big Shoulders Text',
+    'stack' => '"Big Shoulders Text", display',
+    'weights' => array(
+      '100',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900'
     )
   ),
   'bigelowrules' => array(
@@ -1498,6 +1593,14 @@ return array(
       '600',
       '700',
       '900'
+    )
+  ),
+  'calistoga' => array(
+    'source' => 'google',
+    'family' => 'Calistoga',
+    'stack' => '"Calistoga", display',
+    'weights' => array(
+      '400'
     )
   ),
   'calligraffitti' => array(
@@ -2098,6 +2201,17 @@ return array(
       '400'
     )
   ),
+  'courierprime' => array(
+    'source' => 'google',
+    'family' => 'Courier Prime',
+    'stack' => '"Courier Prime", monospace',
+    'weights' => array(
+      '400',
+      '400i',
+      '700',
+      '700i'
+    )
+  ),
   'cousine' => array(
     'source' => 'google',
     'family' => 'Cousine',
@@ -2157,20 +2271,20 @@ return array(
     'stack' => '"Crimson Pro", serif',
     'weights' => array(
       '200',
-      '200i',
       '300',
-      '300i',
       '400',
-      '400i',
       '500',
-      '500i',
       '600',
-      '600i',
       '700',
-      '700i',
       '800',
-      '800i',
       '900',
+      '200i',
+      '300i',
+      '400i',
+      '500i',
+      '600i',
+      '700i',
+      '800i',
       '900i'
     )
   ),
@@ -2283,6 +2397,8 @@ return array(
     'stack' => '"Dancing Script", handwriting',
     'weights' => array(
       '400',
+      '500',
+      '600',
       '700'
     )
   ),
@@ -2516,14 +2632,14 @@ return array(
     'stack' => '"EB Garamond", serif',
     'weights' => array(
       '400',
-      '400i',
       '500',
-      '500i',
       '600',
-      '600i',
       '700',
-      '700i',
       '800',
+      '400i',
+      '500i',
+      '600i',
+      '700i',
       '800i'
     )
   ),
@@ -2924,12 +3040,12 @@ return array(
     'stack' => '"Faustina", serif',
     'weights' => array(
       '400',
-      '400i',
       '500',
-      '500i',
       '600',
-      '600i',
       '700',
+      '400i',
+      '500i',
+      '600i',
       '700i'
     )
   ),
@@ -3299,6 +3415,21 @@ return array(
       '700'
     )
   ),
+  'gelasio' => array(
+    'source' => 'google',
+    'family' => 'Gelasio',
+    'stack' => '"Gelasio", serif',
+    'weights' => array(
+      '400',
+      '400i',
+      '500',
+      '500i',
+      '600',
+      '600i',
+      '700',
+      '700i'
+    )
+  ),
   'gentiumbasic' => array(
     'source' => 'google',
     'family' => 'Gentium Basic',
@@ -3366,6 +3497,14 @@ return array(
     'source' => 'google',
     'family' => 'Gilda Display',
     'stack' => '"Gilda Display", serif',
+    'weights' => array(
+      '400'
+    )
+  ),
+  'girassol' => array(
+    'source' => 'google',
+    'family' => 'Girassol',
+    'stack' => '"Girassol", display',
     'weights' => array(
       '400'
     )
@@ -3541,6 +3680,16 @@ return array(
     'stack' => '"Gugi", display',
     'weights' => array(
       '400'
+    )
+  ),
+  'gupter' => array(
+    'source' => 'google',
+    'family' => 'Gupter',
+    'stack' => '"Gupter", serif',
+    'weights' => array(
+      '400',
+      '500',
+      '700'
     )
   ),
   'gurajada' => array(
@@ -3943,6 +4092,19 @@ return array(
       '400'
     )
   ),
+  'ibarrarealnova' => array(
+    'source' => 'google',
+    'family' => 'Ibarra Real Nova',
+    'stack' => '"Ibarra Real Nova", serif',
+    'weights' => array(
+      '400',
+      '400i',
+      '600',
+      '600i',
+      '700',
+      '700i'
+    )
+  ),
   'iceberg' => array(
     'source' => 'google',
     'family' => 'Iceberg',
@@ -4013,6 +4175,19 @@ return array(
       '700',
       '800',
       '900'
+    )
+  ),
+  'inriaserif' => array(
+    'source' => 'google',
+    'family' => 'Inria Serif',
+    'stack' => '"Inria Serif", serif',
+    'weights' => array(
+      '300',
+      '300i',
+      '400',
+      '400i',
+      '700',
+      '700i'
     )
   ),
   'irishgrover' => array(
@@ -4111,6 +4286,14 @@ return array(
     'source' => 'google',
     'family' => 'Jomhuria',
     'stack' => '"Jomhuria", display',
+    'weights' => array(
+      '400'
+    )
+  ),
+  'jomolhari' => array(
+    'source' => 'google',
+    'family' => 'Jomolhari',
+    'stack' => '"Jomolhari", serif',
     'weights' => array(
       '400'
     )
@@ -4581,6 +4764,23 @@ return array(
       '700i'
     )
   ),
+  'kulimpark' => array(
+    'source' => 'google',
+    'family' => 'Kulim Park',
+    'stack' => '"Kulim Park", sans-serif',
+    'weights' => array(
+      '200',
+      '200i',
+      '300',
+      '300i',
+      '400',
+      '400i',
+      '600',
+      '600i',
+      '700',
+      '700i'
+    )
+  ),
   'kumarone' => array(
     'source' => 'google',
     'family' => 'Kumar One',
@@ -4731,6 +4931,7 @@ return array(
     'weights' => array(
       '300',
       '400',
+      '500',
       '600',
       '700'
     )
@@ -4941,12 +5142,12 @@ return array(
     'stack' => '"Literata", serif',
     'weights' => array(
       '400',
-      '400i',
       '500',
-      '500i',
       '600',
-      '600i',
       '700',
+      '400i',
+      '500i',
+      '600i',
       '700i'
     )
   ),
@@ -5260,18 +5461,26 @@ return array(
       '700'
     )
   ),
+  'mansalva' => array(
+    'source' => 'google',
+    'family' => 'Mansalva',
+    'stack' => '"Mansalva", handwriting',
+    'weights' => array(
+      '400'
+    )
+  ),
   'manuale' => array(
     'source' => 'google',
     'family' => 'Manuale',
     'stack' => '"Manuale", serif',
     'weights' => array(
       '400',
-      '400i',
       '500',
-      '500i',
       '600',
-      '600i',
       '700',
+      '400i',
+      '500i',
+      '600i',
       '700i'
     )
   ),
@@ -5397,7 +5606,9 @@ return array(
     'weights' => array(
       '400',
       '500',
+      '600',
       '700',
+      '800',
       '900'
     )
   ),
@@ -5909,18 +6120,20 @@ return array(
     'stack' => '"Muli", sans-serif',
     'weights' => array(
       '200',
-      '200i',
       '300',
-      '300i',
       '400',
-      '400i',
+      '500',
       '600',
-      '600i',
       '700',
-      '700i',
       '800',
-      '800i',
       '900',
+      '200i',
+      '300i',
+      '400i',
+      '500i',
+      '600i',
+      '700i',
+      '800i',
       '900i'
     )
   ),
@@ -6380,6 +6593,14 @@ return array(
       '900i'
     )
   ),
+  'odibeesans' => array(
+    'source' => 'google',
+    'family' => 'Odibee Sans',
+    'stack' => '"Odibee Sans", display',
+    'weights' => array(
+      '400'
+    )
+  ),
   'odormeanchey' => array(
     'source' => 'google',
     'family' => 'Odor Mean Chey',
@@ -6474,7 +6695,9 @@ return array(
     'weights' => array(
       '400',
       '500',
+      '600',
       '700',
+      '800',
       '900'
     )
   ),
@@ -6908,10 +7131,16 @@ return array(
     'stack' => '"Playfair Display", serif',
     'weights' => array(
       '400',
-      '400i',
+      '500',
+      '600',
       '700',
-      '700i',
+      '800',
       '900',
+      '400i',
+      '500i',
+      '600i',
+      '700i',
+      '800i',
       '900i'
     )
   ),
@@ -7140,6 +7369,31 @@ return array(
       '700i',
       '800',
       '800i'
+    )
+  ),
+  'publicsans' => array(
+    'source' => 'google',
+    'family' => 'Public Sans',
+    'stack' => '"Public Sans", sans-serif',
+    'weights' => array(
+      '100',
+      '200',
+      '300',
+      '400',
+      '500',
+      '600',
+      '700',
+      '800',
+      '900',
+      '100i',
+      '200i',
+      '300i',
+      '400i',
+      '500i',
+      '600i',
+      '700i',
+      '800i',
+      '900i'
     )
   ),
   'puritan' => array(
@@ -7549,9 +7803,14 @@ return array(
     'stack' => '"Roboto Slab", serif',
     'weights' => array(
       '100',
+      '200',
       '300',
       '400',
-      '700'
+      '500',
+      '600',
+      '700',
+      '800',
+      '900'
     )
   ),
   'rochester' => array(
@@ -7608,9 +7867,15 @@ return array(
     'family' => 'Rosario',
     'stack' => '"Rosario", sans-serif',
     'weights' => array(
+      '300',
       '400',
-      '400i',
+      '500',
+      '600',
       '700',
+      '300i',
+      '400i',
+      '500i',
+      '600i',
       '700i'
     )
   ),
@@ -8284,6 +8549,18 @@ return array(
       '400'
     )
   ),
+  'solway' => array(
+    'source' => 'google',
+    'family' => 'Solway',
+    'stack' => '"Solway", serif',
+    'weights' => array(
+      '300',
+      '400',
+      '500',
+      '700',
+      '800'
+    )
+  ),
   'songmyung' => array(
     'source' => 'google',
     'family' => 'Song Myung',
@@ -8567,6 +8844,16 @@ return array(
       '400'
     )
   ),
+  'sulphurpoint' => array(
+    'source' => 'google',
+    'family' => 'Sulphur Point',
+    'stack' => '"Sulphur Point", sans-serif',
+    'weights' => array(
+      '300',
+      '400',
+      '700'
+    )
+  ),
   'sumana' => array(
     'source' => 'google',
     'family' => 'Sumana',
@@ -8846,6 +9133,31 @@ return array(
       '900'
     )
   ),
+  'tomorrow' => array(
+    'source' => 'google',
+    'family' => 'Tomorrow',
+    'stack' => '"Tomorrow", sans-serif',
+    'weights' => array(
+      '100',
+      '100i',
+      '200',
+      '200i',
+      '300',
+      '300i',
+      '400',
+      '400i',
+      '500',
+      '500i',
+      '600',
+      '600i',
+      '700',
+      '700i',
+      '800',
+      '800i',
+      '900',
+      '900i'
+    )
+  ),
   'tradewinds' => array(
     'source' => 'google',
     'family' => 'Trade Winds',
@@ -8911,6 +9223,19 @@ return array(
     'stack' => '"Tulpen One", display',
     'weights' => array(
       '400'
+    )
+  ),
+  'turretroad' => array(
+    'source' => 'google',
+    'family' => 'Turret Road',
+    'stack' => '"Turret Road", display',
+    'weights' => array(
+      '200',
+      '300',
+      '400',
+      '500',
+      '700',
+      '800'
     )
   ),
   'ubuntu' => array(
@@ -9074,6 +9399,14 @@ return array(
       '900'
     )
   ),
+  'vibes' => array(
+    'source' => 'google',
+    'family' => 'Vibes',
+    'stack' => '"Vibes", display',
+    'weights' => array(
+      '400'
+    )
+  ),
   'vibur' => array(
     'source' => 'google',
     'family' => 'Vibur',
@@ -9231,6 +9564,8 @@ return array(
       '200',
       '300',
       '400',
+      '500',
+      '600',
       '700'
     )
   ),

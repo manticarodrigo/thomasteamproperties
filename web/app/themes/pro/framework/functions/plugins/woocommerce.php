@@ -197,11 +197,13 @@ remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_pr
 // ---------------
 
 function x_woocommerce_before_single_product() {
-  echo '<div class="entry-wrap"><div class="entry-content">';
+  global $post;
+  if ( empty($post->post_password) ) echo '<div class="entry-wrap"><div class="entry-content">';
 }
 
 function x_woocommerce_after_single_product() {
-  echo '</div></div>';
+  global $post;
+  if ( empty($post->post_password) ) echo '</div></div>';
 }
 
 add_action( 'woocommerce_before_single_product', 'x_woocommerce_before_single_product', 10 );
@@ -354,13 +356,37 @@ add_action( 'woocommerce_after_single_product_summary', 'x_woocommerce_output_up
 if ( ! function_exists( 'x_woocommerce_navbar_cart_ajax_notification' ) ) :
   function x_woocommerce_navbar_cart_ajax_notification() {
 
+    $fa_solid_enable = (bool) x_get_option( 'x_font_awesome_solid_enable' );
+    $fa_regular_enable = (bool) x_get_option( 'x_font_awesome_regular_enable' );
+    $fa_light_enable = (bool) x_get_option( 'x_font_awesome_light_enable' );
+    
+    if ( $fa_solid_enable || $fa_regular_enable || $fa_light_enable ){
+      // light
+      if ( $fa_light_enable ){
+        $data_x_icon = 'data-x-icon-l';
+      }
+
+      // regular
+      if ( $fa_regular_enable ){
+        $data_x_icon = 'data-x-icon-o';
+      }
+
+      // solid
+      if ( $fa_solid_enable ){
+        $data_x_icon = 'data-x-icon-s';
+      }
+    }else{
+      // default
+      $data_x_icon = 'data-x-icon-l';
+    }
+
     if ( x_is_product_index() && get_option( 'woocommerce_enable_ajax_add_to_cart' ) == 'yes' ) {
       $notification = '<div class="x-cart-notification">'
                       . '<div class="x-cart-notification-icon loading">'
-                        . '<i class="x-icon-cart-arrow-down" data-x-icon-s="&#xf218;" aria-hidden="true"></i>'
+                        . '<i class="x-icon-cart-arrow-down" ' . $data_x_icon . '="&#xf218;" aria-hidden="true"></i>'
                       . '</div>'
                       . '<div class="x-cart-notification-icon added">'
-                        . '<i class="x-icon-check" data-x-icon-s="&#xf00c;" aria-hidden="true"></i>'
+                        . '<i class="x-icon-check" ' . $data_x_icon . '="&#xf00c;" aria-hidden="true"></i>'
                       . '</div>'
                     . '</div>';
     } else {

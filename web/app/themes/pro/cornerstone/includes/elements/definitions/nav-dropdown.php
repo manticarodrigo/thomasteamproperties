@@ -29,6 +29,7 @@ $values = cs_compose_values(
   array(
     'anchor_padding'     => cs_value( '0.75em', 'style' ),
     'anchor_text_margin' => cs_value( '5px auto 5px 5px', 'style' ),
+    'anchor_flex_justify' => cs_value( 'flex-start', 'style' )
   ),
   'omega',
   'omega:toggle-hash'
